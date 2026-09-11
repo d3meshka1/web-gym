@@ -58,7 +58,52 @@
                 </tbody>
             </table>
 
-            
+            <article>
+                <h3>REQUEST A PERSONAL TRAINING PLAN</h3>
+                <p>Select your preferred coach and target program below. Our staff will review your submission and contact you via secure comms.</p>
+                
+                <form action="#" method="POST">
+                    <div>
+                        <label for="username">Operative Name:</label><br>
+                        <input type="text" id="username" name="username" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <br>
+                    <div>
+                        <label for="coach">Choose Your Trainer:</label><br>
+                        <select id="coach" name="coach">
+                            <option value="iron_mike">Anuar Kuandyq (Heavy Powerlifting & Mass)</option>
+                            <option value="vortex_sarah">Oksana Samusayeva(Crossfit & Functional Conditioning)</option>
+                            <option value="titan_alex">Dias Askarov (Hardcore Boxing & Sparring)</option>
+                        </select>
+                    </div>
+
+                    <br>
+                    <div>
+                        <label>Target Goal / Plan:</label><br>
+                        <input type="radio" id="goal_mass" name="goal" value="mass" checked>
+                        <label for="goal_mass">Hypertrophy & Raw Mass</label><br>
+                        
+                        <input type="radio" id="goal_strength" name="goal" value="strength">
+                        <label for="goal_strength">Max Strength (Powerlifting)</label><br>
+                        
+                        <input type="radio" id="goal_cardio" name="goal" value="cardio">
+                        <label for="goal_cardio">Endurance & Fat Loss</label>
+                    </div>
+
+                    <br>
+                    <div>
+                        <label for="comments">Additional Notes / Injuries:</label><br>
+                        <textarea id="comments" name="comments" rows="4" cols="30" placeholder="Experience level or specific requirements"></textarea>
+                    </div>
+
+                    <br>
+                    <div>
+                        <button type="submit">TRANSMIT REQUEST</button>
+                    </div>
+                </form>
+            </article>
+
         </section>
     </main>
 
