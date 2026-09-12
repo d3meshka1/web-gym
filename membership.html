@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Membership page - Underground Gym" />
+    <meta name="author" content="Kaidar Demezhan" />
+    <title>Membership - Underground Gym</title>
+  </head>
+  <body>
+    <header>
+      <!--author - Kaidar Demezhan-->
+      <h1>Underground Gym</h1>
+      <h2>Membership</h2>
+
+      <nav>
+        <hr />
+        <p><em>Navigation: </em></p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="colophon.html">About the Website</a></li>
+          <li><a href="branches.html">Branches</a></li>
+          <li><a href="membership.html">Membership and Prices</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+        </ul>
+        <hr />
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>About Membership</h2>
+        <p>
+          Welcome to Underground Gym membership options. We offer flexible plans
+          designed to fit your fitness goals, whether you are looking for daily
+          access, monthly passes, or annual VIP packages. Enjoy full access to
+          our state-of-the-art strength training equipment, cardio zones, and
+          professional coaching staff across all our branches.
+        </p>
+        <p>
+          Managers often tell customers,
+          <q>An annual subscription pays for itself by the third month.</q>
+        </p>
+
+        <hr />
+      </section>
+
+      <section>
+        <p>&darr; You can see abonent types &darr;</p>
+
+        <dl>
+          <dt>Silver Card</dt>
+          <dd>
+            An affordable subscription plan, suitable for both high school and
+            college students.
+          </dd>
+          <dt>Gold Card</dt>
+          <dd>
+            It's a more expensive plan, but you get great benefits for the
+            higher price!
+          </dd>
+          <dt>Platinum Card</dt>
+          <dd>The top-tier membership plan, which includes full ACCESS.</dd>
+        </dl>
+        <hr />
+      </section>
+      <section>
+        <p>&uarr; Subscription types &uarr;</p>
+
+        <p>
+          Here you can see the prices for subscriptions. Save even more with our
+          quarterly and annual subscriptions!
+        </p>
+        <div>
+          <!-- div used here as a scroll wrapper for the table on small screens; no semantic tag represents a layout/scroll container -->
+
+          <table id="prices">
+            <caption>
+              Pricing &amp; Subscription Plans
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Plan Type</th>
+                <th scope="col">Monthly</th>
+                <th scope="col">Quarterly (3 Months)</th>
+                <th scope="col">Annual (12 Months)</th>
+                <th scope="col">What's Included</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Silver Card</strong></td>
+                <td>7 490 &#8376;</td>
+                <td>22 470 &#8376;</td>
+                <td>89 880 &#8376;</td>
+                <td>
+                  Access to 7 selected branches of the chain (unlimited
+                  self-guided workouts).
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Gold Card</strong></td>
+                <td>10 990 &#8376;</td>
+                <td>32 970 &#8376;</td>
+                <td>131 880 &#8376;</td>
+                <td>
+                  Unlimited access to all locations in the chain (11–12 gyms),
+                  independent visits, membership freezes, and guest visits.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Platinum Card</strong></td>
+                <td>20 833 &#8376;</td>
+                <td>62 499 &#8376;</td>
+                <td>249 996 &#8376;</td>
+                <td>
+                  The premium membership plan, which includes full, unlimited
+                  access to all locations, in-studio classes with a trainer
+                  (group or one-on-one sessions as scheduled), group programs
+                  (yoga, stretching, fitness mix), and access to the spa and
+                  saunas. Unlimited access to all branches in the network (11–12
+                  locations), self-guided workouts, membership freezes, and
+                  guest visits.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr />
+      </section>
+
+      <section>
+        <h3>Reviews!</h3>
+        <blockquote>
+          <p>Rating: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <p>
+            I purchased the Silver Membership at Underground Gym last month, and
+            it has been a fantastic decision. I was looking for a balanced
+            option that allowed me full access to the gym floor and basic
+            classes without paying extra for premium perks I wouldn't use, and
+            the Silver tier hits the absolute<span>sweet spot</span>.
+            <!-- span used here to allow future CSS styling of a single word; no semantic tag fits a stylistic highlight -->
+          </p>
+        </blockquote>
+        <cite>— Assylzhan, 19.06.2026</cite>
+        <hr />
+      </section>
+
+      <section>
+        <h3>Ways to Get a Subscription</h3>
+        <ul>
+          <li>
+            Call to our Managers
+            <ul>
+              <li>
+                <a
+                  href="https://wa.me/77010353003"
+                  target="_blank"
+                  rel="noopener"
+                  >Get a Subscription</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            Sign up for a subscription yourself
+            <ul>
+              <li>
+                <a href="#Subscription">Press</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Or you can visit any of our branches
+            <ul>
+              <li><a href="branches.html">Branches</a></li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+      </section>
+
+      <section id="Subscription">
+        <h3>Get a Subscription Right Now!</h3>
+        <form action="#" method="post">
+          <!-- form not connected to a server yet, submission has no backend handling at this stage -->
+          <fieldset>
+            <legend>Enter your information</legend>
+            <label for="full-name">Full-Name: </label><br />
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              placeholder="Type"
+            /><br /><br />
+            <label for="phone-number">Phone-Number: </label><br />
+            <input
+              type="tel"
+              id="phone-number"
+              name="phone-number"
+              placeholder="Type"
+            /><br /><br />
+            <label for="email">Email: </label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Type"
+            /><br />
+            <br />
+            <label for="period">Enter the subscription period</label>
+            <input
+              type="number"
+              id="period"
+              name="period"
+              min="1"
+              max="12"
+            /><br />
+            <br />
+            <label for="sub">Select the Subscription:</label><br />
+            <select name="sub" id="sub">
+              <option value="s1">Silver</option>
+              <option value="s2">Gold</option>
+              <option value="s3">Platinum</option></select
+            ><br /><br />
+            <input type="checkbox" id="consent" name="consent" required />
+            <label for="consent"
+              >I agree to the processing of my personal data</label
+            ><br />
+            <br />
+            <label for="comment">Comments: </label> <br />
+            <textarea
+              id="comment"
+              name="comment"
+              placeholder="Anything we sholud know?"
+              rows="5"
+              cols="15"
+            ></textarea>
+            <br />
+            <br />
+            <button type="submit">Get a Subscription</button>
+            <button type="reset">Reset</button>
+            <a href="#prices">Return to prices</a>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <p>Work hours: 8:00-23:00</p>
+      <p>
+        Contact us on WhatsApp:
+        <a href="https://wa.me/77471395196" target="_blank" rel="noopener"
+          >chat</a
+        >
+      </p>
+      <p>&copy; 2026 Underground Gym.</p>
+    </footer>
+  </body>
+</html>
