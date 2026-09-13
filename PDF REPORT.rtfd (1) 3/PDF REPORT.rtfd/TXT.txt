@@ -1,0 +1,49 @@
+TASK A UNDERGROUND GYM
+1.Doctype/Meta
+Screenshot 2026-09-13 at 00.55.37.png ¬
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сеть фитнес-клубов Underground Gym в Астане и Костанае</title>
+The “lang” attribute is missing, even though the entire website is in Russian!(1.a structural issue,
+an actual website error)
+<meta name="description" content="Крупнейшая в Астане сеть фитнес-центров Underground
+GYM. 12 филиалов, финские сауны, занятия по йоге и стретчингу.">
+<meta name="keywords" content="Фитнес в Астане, Спортзал в Астане, Undeground Gym,
+Фитнес-клуб, Тренажерный зал, Underground Big, Абонемент, Тренер, Персональный
+тренер">
+<meta name="format-detection" content="telephone=no">
+2. Sematic
+No header, nav, main, section, article, aside, or footer elements were found
+The entire structure consists of a `div` (with classes for styling), plus a `script` and a `link`
+Screenshot 2026-09-13 at 00.55.59.png ¬
+3. Forms and Tables
+The form is implemented not as semantic HTML, but as a JavaScript widget—it is not
+accessible without JavaScript and is not read by screen readers as reliably as a true <form>
+with <label>
+No tables were found in the source code either; the schedule and prices were likely laid out
+using a div grid
+Screenshot 2026-09-13 at 00.56.27.png ¬
+How did you avoid this in your own code:
+You have a real, completely static HTML form—it works and is visible in the source code without
+a single line of JavaScript, using `for` and `id` for labels, `fieldset` and `legend`, and all the
+necessary `type` attributes
+4.Mistakes
+1. No lang
+2. Using `div`s instead of semantic markup—building the entire layout with `div`s—makes it
+harder to understand the page's structure (where the menu is, where the main content is, where
+the footer is)
+3. “Keywords” meta tag — an outdated, ineffective practice
+How did we avoid this in your own case
+1. We have lang ="en" in each page
+2.We have clear semantics—header, nav, main, section, article, aside, and footer are used as
+intended, and div is used only where semantics really has no place
+3.We don't have any extra meta tags—just the description and author tags
+SKETCH PHOTO
+
+Task B — Written Part
+A web page is a text document structured with HTML tags that assign meaning to raw content. When a browser opens our project files, it parses the code top to bottom, building a Document Object Model (DOM) tree. It interprets these elements to render tables, lists, and forms visually on the screen without needing external software.
+Across all six files of our website project (index.html, colophon.html, branches.html, membership.html, schedule.html, and facilities.html), we strictly chose semantic tags over generic <div> containers to ensure proper accessibility and structure. First, in schedule.html, I used <nav> for the site links instead of a <div> so screen readers immediately identify the primary navigation block. Second, in facilities.html, I wrapped the "Free Weights" section in an <article> because this specific equipment breakdown is self-contained, and utilized an <aside> for the maintenance protocol. Third, across the pages developed by my partner like membership.html, we incorporated advanced semantic structures such as description lists (<dl>, <dt>, <dd>) for subscription types and structured data tables (<table> with <thead>, <tbody>, and scope attributes) for pricing plans.
+Currently, clicking "TRANSMIT REQUEST" in the schedule.html form triggers client-side validation for required fields like email and date. Because the action attribute is set to # and there is no server-side backend connected yet, a successful click simply refreshes the page, and the input data is discarded without being processed.
+
+
