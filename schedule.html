@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Author: Yerassyl Sagimgaliyev -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Hardcore group training timetable and personal plan request form at Iron Dungeon Gym Astana.">
-    <meta name="author" content="Student 2">
+    <meta name="author" content="Yerassyl Sagimgaliyev">
     <title>Schedule & Booking // Underground Gym</title>
 </head>
 <body>
     <header>
-        <h1> UNDERGROUND// SCHEDULE & BOOKING </h1>
+        <h1> UNDERGROUND // SCHEDULE & BOOKING </h1>
+        
+        <!-- I chose the nav tag here because it semantically defines a block of major navigation links for the entire site, which helps screen readers identify the menu immediately. -->
         <nav>
             <ul>
-                  <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="colophon.html">Colophon</a></li>
-                <li><a href="branches.html">branches</a></li>
-                <li><a href="membership.html">membership</a></li>
-                <li><a href="schedule.html">schedule</a></li>
+                <li><a href="branches.html">Branches</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
                 <li><a href="facilities.html">Facilities</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -26,8 +30,10 @@
             <h2>ACCESS LEVEL: PUBLIC TIMETABLE</h2>
             <p>Welcome to the core grid. Below is the weekly operational matrix for our underground sessions. No excuses, no shortcuts.</p>
             
+            <p>Quick jump to sections: <a href="#booking-form">Booking Form</a> | <a href="#protocols">Safety Protocols</a></p>
+            
             <table>
-                <caption>--- COMBAT & LIFTING MATRIX (SPRING 2026) ---</caption>
+                <caption>--- COMBAT &amp; LIFTING MATRIX (SPRING 2026) ---</caption>
                 <thead>
                     <tr>
                         <th scope="col">TIME_SLOT</th>
@@ -57,67 +63,131 @@
                     </tr>
                 </tbody>
             </table>
+            
+            <hr>
 
-            <article>
+            <article id="booking-form">
                 <h3>REQUEST A PERSONAL TRAINING PLAN</h3>
                 <p>Select your preferred coach and target program below. Our staff will review your submission and contact you via secure comms.</p>
                 
                 <form action="#" method="POST">
-                    <div>
-                        <label for="username">Operative Name:</label><br>
-                        <input type="text" id="username" name="username" placeholder="Enter your full name" required>
-                    </div>
-                    
-                    <br>
-                    <div>
-                        <label for="coach">Choose Your Trainer:</label><br>
-                        <select id="coach" name="coach">
-                            <option value="iron_mike">Anuar Kuandyq (Heavy Powerlifting & Mass)</option>
-                            <option value="vortex_sarah">Oksana Samusayeva(Crossfit & Functional Conditioning)</option>
-                            <option value="titan_alex">Dias Askarov (Hardcore Boxing & Sparring)</option>
-                        </select>
-                    </div>
-
-                    <br>
-                    <div>
-                        <label>Target Goal / Plan:</label><br>
-                        <input type="radio" id="goal_mass" name="goal" value="mass" checked>
-                        <label for="goal_mass">Hypertrophy & Raw Mass</label><br>
+                    <!-- The form does not send anything yet - there is no server behind it. -->
+                    <fieldset>
+                        <legend>Operative Registration Profile</legend>
                         
-                        <input type="radio" id="goal_strength" name="goal" value="strength">
-                        <label for="goal_strength">Max Strength (Powerlifting)</label><br>
+                        <!-- Using div here because there is no specific semantic tag for grouping a label and an input together purely for vertical layout flow. -->
+                        <div>
+                            <label for="username">Operative Name:</label><br>
+                            <input type="text" id="username" name="username" placeholder="Enter your full name" required>
+                        </div>
+                        <br>
                         
-                        <input type="radio" id="goal_cardio" name="goal" value="cardio">
-                        <label for="goal_cardio">Endurance & Fat Loss</label>
-                    </div>
+                        <div>
+                            <label for="email">Secure Email:</label><br>
+                            <input type="email" id="email" name="email" placeholder="agent@example.com" required>
+                        </div>
+                        <br>
+                        
+                        <div>
+                            <label for="phone">Phone Number:</label><br>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 777 000 0000" required>
+                        </div>
+                        <br>
+                        
+                        <div>
+                            <label for="age">Operative Age:</label><br>
+                            <input type="number" id="age" name="age" min="16" max="99" required>
+                        </div>
+                        <br>
+                        
+                        <div>
+                            <label for="start_date">Preferred Start Date:</label><br>
+                            <input type="date" id="start_date" name="start_date" required>
+                        </div>
+                        <br>
+                        
+                        <div>
+                            <label for="coach">Choose Your Trainer:</label><br>
+                            <select id="coach" name="coach">
+                                <option value="iron_mike">Anuar Kuandyq (Heavy Powerlifting &amp; Mass)</option>
+                                <option value="vortex_sarah">Oksana Samusayeva (Crossfit &amp; Conditioning)</option>
+                                <option value="titan_alex">Dias Askarov (Hardcore Boxing &amp; Sparring)</option>
+                            </select>
+                        </div>
+                        <br>
+                        
+                        <div>
+                            <label>Target Goal / Plan:</label><br>
+                            <input type="radio" id="goal_mass" name="goal" value="mass" checked>
+                            <label for="goal_mass">Hypertrophy &amp; Raw Mass</label><br>
+                            
+                            <input type="radio" id="goal_strength" name="goal" value="strength">
+                            <label for="goal_strength">Max Strength (Powerlifting)</label><br>
+                            
+                            <input type="radio" id="goal_cardio" name="goal" value="cardio">
+                            <label for="goal_cardio">Endurance &amp; Fat Loss</label>
+                        </div>
+                        <br>
+                        
+                        <div>
+                            <label for="comments">Additional Notes / Injuries:</label><br>
+                            <textarea id="comments" name="comments" rows="4" cols="30" placeholder="Experience level or specific requirements"></textarea>
+                        </div>
+                        <br>
 
-                    <br>
-                    <div>
-                        <label for="comments">Additional Notes / Injuries:</label><br>
-                        <textarea id="comments" name="comments" rows="4" cols="30" placeholder="Experience level or specific requirements"></textarea>
-                    </div>
-
-                    <br>
-                    <div>
-                        <button type="submit">TRANSMIT REQUEST</button>
-                    </div>
+                        <div>
+                            <input type="checkbox" id="waiver" name="waiver" required>
+                            <label for="waiver">I confirm I have no medical restrictions preventing me from heavy lifting.</label>
+                        </div>
+                        <br>
+                        
+                        <div>
+                            <button type="submit">TRANSMIT REQUEST</button>
+                            <button type="reset">CLEAR FORM</button>
+                        </div>
+                    </fieldset>
                 </form>
             </article>
+            
+            <hr>
 
-            <article>
-                <h3>PROTOCOLS & REQUIREMENTS</h3>
-                <p>System rule #1: <q>Consistency in attendance beats occasional intensity</q>. Every operative must bring personal gear:</p>
+            <article id="protocols">
+                <h3>PROTOCOLS &amp; REQUIREMENTS</h3>
+                
+                <ol start="1">
+                    <li>System rule #1: <q>Consistency in attendance beats occasional intensity</q>.</li>
+                    <li><b>Respect the equipment.</b></li>
+                    <li><i>Follow the trainer's command.</i></li>
+                </ol>
+
+                <p>Every operative must bring personal gear:</p>
                 <ul>
-                    <li>Heavy-duty lifting belt</li>
+                    <li>Heavy-duty lifting belt (essential for 1<abbr title="Repetition Maximum">RM</abbr> max lifts)</li>
                     <li>Chalk and wrist wraps</li>
-                    <li>Water container (<mark>hydration is mandatory</mark>)</li>
+                    <li>Water container (hydrate with H<sub>2</sub>O; <mark>hydration is mandatory</mark>)</li>
                 </ul>
+
+                <h4>Glossary of Gym Terms</h4>
+                <dl>
+                    <dt>Hypertrophy</dt>
+                    <dd>The enlargement of tissue from the increase in size of its cells, i.e., building muscle.</dd>
+                    <dt>Sparring</dt>
+                    <dd>A form of training in combat sports where you simulate real boxing.</dd>
+                </dl>
+
+                <blockquote>
+                    <p>"The iron never lies to you. You can walk outside and listen to all kinds of talk, get told that you're a god or a total bastard. The iron will always kick you the real deal."</p>
+                    <footer>&mdash; <cite>Henry Rollins</cite></footer>
+                </blockquote>
             </article>
         </section>
     </main>
 
     <footer>
-        <p>LOCATION: Astana  | call: +7 747 139 5196</p>
+        <address>
+            <p>Location: Astana, Qostanai| call: <a href="tel:+77471395196">+7 747 139 5196</p>
+        </address>
+        <p><small>&copy; 2026 Underground Gym. Powered by pure <a href="https://www.w3.org/TR/html52/" target="_blank" rel="noopener noreferrer">HTML5 Standards</a>.</small></p>
     </footer>
 </body>
 </html>
