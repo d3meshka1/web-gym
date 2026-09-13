@@ -17,8 +17,7 @@ schedule.html
 report.pdf(task a + task b)
 sketch.jpg
 
-How to open website?
-Open index.html directly in your browser; the website consists of local files—there is no server or domain.
+
 
 
 
