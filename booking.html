@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Форма онлайн-записи и бронирования персональной тренировки в фитнес-центре Bonanza Gym в Астане."
+    />
+    <meta name="author" content="Yerrasyl Sagimgaliyev" />
+    <!--Yerrasyl Sagimgaliyev-->
+    <title>Записаться на тренировку — Bonanza Gym</title>
+  </head>
+  <body>
+    <header>
+      <h1>Онлайн-бронирование визита</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="branche.html">Клуб и расписание</a></li>
+          <li><a href="services.html">Услуги и цены</a></li>
+          <li><a href="booking.html">Записаться</a></li>
+          <li><a href="nutrition.html">Питание</a></li>
+          <li><a href="colophon.html">Как устроен сайт</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Как записаться на тренировку в Bonanza Gym</h2>
+        <p>
+          Вы можете забронировать первое ознакомительное занятие, персональную
+          тренировку с тренером или визит в тренажерный зал через форму ниже.
+          После отправки заявки наш администратор свяжется с вами по указанному
+          телефону или электронной почте для подтверждения времени.
+        </p>
+
+        <h3>Что важно знать перед визитом:</h3>
+        <ul>
+          <li>
+            При себе необходимо иметь удостоверение личности (для оформления
+            гостевого пропуска).
+          </li>
+          <li>Возьмите с собой сменную спортивную обувь и удобную форму.</li>
+          <li>
+            Полотенце и питьевую воду можно принести с собой или взять на
+            рецепции клуба.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Заполните форму для резервирования времени</h2>
+        <p>
+          Укажите ваши контактные данные и выберите желаемые параметры
+          посещения.
+        </p>
+
+        <!-- Форма со всеми обязательными требованиями: method, action, fieldset, legend, labels по id, типы input, радиокнопки, чекбокс, select, textarea, required -->
+        <form action="#" method="POST">
+          <fieldset>
+            <legend>Персональная информация и параметры записи</legend>
+
+            <p>
+              <label for="fullname">Ваше ФИО:</label><br />
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Например: Қайдар Демежан"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="email">Электронная почта:</label><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="user@example.com"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="phone">Номер телефона:</label><br />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+7 (777) 000-00-00"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="age">Ваш возраст:</label><br />
+              <input
+                type="number"
+                id="age"
+                name="age"
+                min="16"
+                max="90"
+                value="20"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="visit-date">Желаемая дата визита:</label><br />
+              <input type="date" id="visit-date" name="visit_date" required />
+            </p>
+
+            <p>
+              <label for="visit-time">Удобное время:</label><br />
+              <input type="time" id="visit-time" name="visit_time" required />
+            </p>
+
+            <p>Формат посещения:</p>
+            <p>
+              <input
+                type="radio"
+                id="visit-solo"
+                name="visit_format"
+                value="solo"
+                checked
+              />
+              <label for="visit-solo">Самостоятельная тренировка</label><br />
+              <input
+                type="radio"
+                id="visit-trainer"
+                name="visit_format"
+                value="trainer"
+              />
+              <label for="visit-trainer"
+                >Тренировка с персональным наставником</label
+              >
+            </p>
+
+            <p>
+              <label for="membership-type">Выберите направление:</label><br />
+              <select id="membership-type" name="membership_type" required>
+                <option value="" disabled selected>
+                  -- Выберите услугу --
+                </option>
+                <option value="gym">Дневной зал Стандарт</option>
+                <option value="gym">Вечерний зал Стандарт</option>
+                <option value="student">Студенческий/Школьный абонемент</option>
+                <option value="gym">Безлимит на 3 месяца</option>
+                <option value="gym">Безлимит на полгода</option>
+                <option value="personal">
+                  Пакет из 12 персональных тренировок
+                </option>
+              </select>
+            </p>
+
+            <p>
+              <label for="comments">Дополнительные пожелания или цели:</label
+              ><br />
+              <textarea
+                id="comments"
+                name="comments"
+                rows="4"
+                cols="40"
+                placeholder="Укажите цель тренировки (набор массы, похудение), наличие травм или желаемого тренера..."
+              ></textarea>
+            </p>
+
+            <p>
+              <input type="checkbox" id="agreement" name="agreement" required />
+              <label for="agreement"
+                >Я согласен на обработку персональных данных</label
+              >
+            </p>
+
+            <p>
+              <!-- 
+                            Примечание: Форма не отправляется на сервер, так как бэкенд отсутствует 
+                        -->
+              <button type="submit">Отправить заявку</button>
+              <button type="reset">Очистить форму</button>
+            </p>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Bonanza Gym. Все права защищены.</p>
+    </footer>
+  </body>
+</html>
