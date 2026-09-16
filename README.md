@@ -17,23 +17,18 @@ colophon.html	Technical details about site development, HTML specifications, and
 
 
 bonanza_project/
-│
 ├── images/
 │   └── ...
-│
 ├── avatar/
 │   └── ...
-│
 ├── booking.html
 ├── branches.html
 ├── colophon.html
 ├── index.html
 ├── nutrition.html
 ├── services.html
-│
 ├── ai.log.txt
 ├── checklist.html
-│
 └── PDF REPORT/
     ├── TASK A
     └── TASK B
