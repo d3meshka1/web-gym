@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Рекомендации по спортивному питанию, расчету калорий и набору массы в Bonanza Gym."
+    />
+    <meta name="author" content="Yerrasyl Sagimgaliyev" />
+    <!--author - Yerrasyl Sagimgaliyev-->
+    <title>Питание и режим — Bonanza Gym</title>
+  </head>
+  <body>
+    <header>
+      <h1>Спортивное питание и режим для набора массы</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="branche.html">Клуб и расписание</a></li>
+          <li><a href="services.html">Услуги и цены</a></li>
+          <li><a href="booking.html">Записаться</a></li>
+          <li><a href="nutrition.html">Питание</a></li>
+          <li><a href="colophon.html">Как устроен сайт</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Основы правильного рациона при тренировках</h2>
+        <p>
+          Для достижения заметных результатов в тренажерном зале важна не только
+          интенсивная физическая нагрузка, но и сбалансированное питание. Ниже
+          приведены ключевые принципы потребления белков, жиров, углеводов и
+          базовые ориентиры для прогресса.
+        </p>
+
+        <!-- Таблица норм нутриентов для разных целей -->
+        <table>
+          <caption>
+            Ориентировочное суточное соотношение нутриентов по целям
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Цель тренировок</th>
+              <th scope="col">Калорийность</th>
+              <th scope="col">Белки (на 1 кг веса)</th>
+              <th scope="col">Углеводы и жиры</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Набор мышечной массы</th>
+              <td>Профицит (+10–15%)</td>
+              <td>1.8 – 2.2 г</td>
+              <td>Умеренный профицит сложных углеводов</td>
+            </tr>
+            <tr>
+              <th scope="row">Сжигание жира (Сушка)</th>
+              <td>Дефицит (-15–20%)</td>
+              <td>2.0 – 2.4 г</td>
+              <td>Снижение углеводов, полезные жиры</td>
+            </tr>
+            <tr>
+              <th scope="row">Поддержание формы</th>
+              <td>Баланс (удержание)</td>
+              <td>1.6 – 1.8 г</td>
+              <td>Сбалансированное меню по энергозатратам</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Основные правила рациона</h3>
+        <ul>
+          <li>
+            <strong>Профицит калорий:</strong> для стабильного роста мышечных
+            волокон потребление энергии должно слегка превышать ваш суточный
+            базовый расход.
+          </li>
+          <li>
+            <strong>Достаточное количество белка:</strong> главный строительный
+            материал (куриная грудка, говядина, индейка, яйца, творог, рыба).
+          </li>
+          <li>
+            <strong>Сложные углеводы:</strong> гречка, бурый рис, овсянка и
+            макароны из твердых сортов пшеницы для поддержания высокой
+            работоспособности на тренировке.
+          </li>
+        </ul>
+
+        <section>
+          <h3>Популярные спортивные добавки</h3>
+          <dl>
+            <dt></dt>
+            <dd>
+              <figure>
+                <img
+                  src="images/creatine-monohydrate.jpg"
+                  alt="Банка с креатином моногидратом"
+                />
+                <figcaption>Креатин моногидрат в порошке.</figcaption>
+              </figure>
+              Способствует росту силовых показателей, увеличению запасов АТФ и
+              гидратации мышечных клеток.
+            </dd>
+
+            <dt></dt>
+            <dd>
+              <figure>
+                <img
+                  src="images/protein.jpeg"
+                  alt="Спортивный шейкер и банка сывороточного протеина"
+                />
+                <figcaption>
+                  Сывороточный протеин для восстановления.
+                </figcaption>
+              </figure>
+              Удобный и быстрый источник качественного белка для закрытия
+              белкового окна после нагрузок.
+            </dd>
+
+            <dt></dt>
+            <dd>
+              <figure>
+                <img src="images/d3.jpg" alt="Капсулы Омега-3 и витамина D3" />
+                <figcaption>
+                  Витаминные комплексы для суставов и иммунитета.
+                </figcaption>
+              </figure>
+              Поддерживают здоровье сердечно-сосудистой системы, суставов и
+              общий гормональный фон.
+            </dd>
+          </dl>
+        </section>
+
+        <article>
+          <h4>Цитата эксперта по питанию</h4>
+          <blockquote>
+            <q
+              >Питание — это 70% вашего успеха в построении качественного тела.
+              Дисциплина на кухне важнее дисциплины под штангой.</q
+            >
+            <footer>
+              — Винсу Жиронде,
+              <cite>запись <time datetime="1970-xx-xx">1970</time> года</cite>
+            </footer>
+          </blockquote>
+        </article>
+      </section>
+
+      <section>
+        <h3>Задать вопрос нашему нутрициологу</h3>
+        <p>
+          Если вы не знаете, как составить личный КБЖУ-план, отправьте заявку на
+          консультацию:
+        </p>
+        <form action="#" method="POST">
+          <fieldset>
+            <legend>Форма консультации по питанию</legend>
+            <p>
+              <label for="nutri-name">Имя:</label><br />
+              <input
+                type="text"
+                id="nutri-name"
+                name="nutri_name"
+                placeholder="Ваше имя"
+                required
+              />
+            </p>
+            <p>
+              <label for="phone">Номер телефона:</label><br />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+7 (777) 000-00-00"
+                required
+              />
+            </p>
+            <p>
+              <label for="nutri-question">Ваш вопрос по рациону:</label><br />
+              <textarea
+                id="nutri-question"
+                name="nutri_question"
+                rows="4"
+                cols="40"
+                placeholder="Например: сколько грамм белка мне нужно при весе 75 кг?"
+                required
+              ></textarea>
+            </p>
+            <p>
+              <button type="submit">Задать вопрос</button>
+            </p>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Bonanza Gym. Все права защищены.</p>
+    </footer>
+  </body>
+</html>
