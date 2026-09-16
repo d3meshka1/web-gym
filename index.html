@@ -1,129 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Home page - Underground Gym" />
+    <meta
+      name="description"
+      content="Официальный сайт фитнес-центра Bonanza Gym в Астане."
+    />
     <meta name="author" content="Kaidar Demezhan" />
-    <title>Home - Underground Gym</title>
+    <!--Author - Kaidar Demezhan-->
+    <title>Главная — Bonanza Gym</title>
   </head>
   <body>
+    <!-- 
+      здесь располагается шапка сайта с навигацией.
+    -->
     <header>
-      <!--author - Kaidar Demezhan-->
-      <h1><i>Underground Gym</i></h1>
-      <hr />
-      <!-- The navigation block is placed inside nav to make the links easier for users to find -->
+      <h1>Bonanza Gym — Фитнес-центр нового поколения в Астане</h1>
       <nav>
-        <p><em>Navigation: </em></p>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="colophon.html">About the Website</a></li>
-          <li><a href="branches.html">Branches</a></li>
-          <li><a href="membership.html">Membership and Prices</a></li>
-          <li><a href="schedule.html">Schedule</a></li>
-          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="branche.html">Клуб и расписание</a></li>
+          <li><a href="services.html">Услуги и цены</a></li>
+          <li><a href="booking.html">Записаться</a></li>
+          <li><a href="nutrition.html">Питание</a></li>
+          <li><a href="colophon.html">Как устроен сайт</a></li>
         </ul>
       </nav>
     </header>
+
     <main>
-      <!-- The section is used to logically divide the content into meaningful blocks
-        and improve the document structure -->
+      <hr />
       <section>
-        <hr />
-
-        <h2>DO YOU WANT TO GET A FIT BODY&hellip;</h2>
-
-        <p><strong>FOR ONLY &mdash; 20,999 KZT PER MONTH?</strong></p>
-
+        <h2>Добро пожаловать в Bonanza Gym</h2>
         <p>
-          Contact us by phone:
-          <a href="tel:+77471395196">+7 (747) 139-51-96</a> or email us at
-          <a href="mailto:evgballes@gmail.com">evgballes@gmail.com</a>.
+          Добро пожаловать в наш современный спортивный комплекс. Мы предлагаем
+          уникальные условия для силовых тренировок, кроссфита и кардио. Наша
+          цель — помочь вам достичь пика физической формы в комфортной
+          обстановке под руководством профессиональных тренеров.
         </p>
-        <hr />
+
+        <!-- 3 изображения с осмысленным alt и подготовкой под будущие классы CSS / селекторы JS -->
+        <figure id="main-banner">
+          <img
+            src="images/photo_2026-09-16_14-41-05.jpg"
+            alt="Просторный тренажерный зал Bonanza Gym с современным оборудованием"
+          />
+          <figcaption>Тренировочный зал нашего Bonanza Gym.</figcaption>
+        </figure>
+
+        <h3>Почему выбирают нас</h3>
+        <p>
+          Каждый день мы совершенствуем наше пространство для вашего удобства.
+          <strong>Современное оборудование</strong> и
+          <em>опытный персонал</em> гарантируют безопасность и эффективность
+          занятий.
+        </p>
+      </section>
+      <section>
+        <h2>Отзывы наших клиентов</h2>
+
+        <article>
+          <blockquote>
+            <figure>
+              <figcaption>
+                <p>Рейтинг: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <q>Хороший зал, хорошие спокойные дружелюбные тренера👍</q>
+                <footer>
+                  — Tilegen Z., <cite>постоянный клиент</cite> (<time
+                    datetime="2026-03-21"
+                    >21 марта 2026</time
+                  >)
+                </footer>
+              </figcaption>
+              <img
+                src="avatar/photo_2026-09-16_14-52-00.jpg"
+                alt="Аватар клиента Тилеген."
+              />
+            </figure>
+          </blockquote>
+        </article>
+
+        <article>
+          <blockquote>
+            <figure>
+              <figcaption>
+                <p>Рейтинг: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <q
+                  >Отличный зал. Отзывчивый персонал. На просьбы и вопросы
+                  обращают максимальное внимание.</q
+                >
+                <footer>
+                  — Sokolovskiy Z., <cite>постоянный клиент</cite> (<time
+                    datetime="2026-04-25"
+                    >25 апреля 2026</time
+                  >)
+                </footer>
+              </figcaption>
+              <img
+                src="avatar/photo_2026-09-16_14-51-57.jpg"
+                alt="Аватар клиента Соколовски."
+              />
+            </figure>
+          </blockquote>
+        </article>
+
+        <article>
+          <blockquote>
+            <figure>
+              <figcaption>
+                <p>Рейтинг: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <q>Персонал молодцы. Понравилось.</q>
+                <footer>
+                  — Margarite L., <cite>член кроссфит группы</cite> (<time
+                    datetime="2026-07-10"
+                    >10 июля 2026</time
+                  >)
+                </footer>
+              </figcaption>
+              <img
+                src="avatar/photo_2026-09-16_14-52-03.jpg"
+                alt="Аватар клиента Маргарита."
+              />
+            </figure>
+          </blockquote>
+        </article>
       </section>
 
       <section>
-        <h2>Our Advantages</h2>
-        <ul>
-          <li>Unlimited access with a trainer</li>
-          <li>Access to 11 <abbr title="Company branches">branches</abbr></li>
-          <li>Personal locker</li>
-          <li>Spacious changing rooms</li>
-          <li>Halls at least 120 m<sup>2</sup></li>
-        </ul>
-        <hr />
+        <p>
+          Свяжитесь с нами напрямую по электронной почте:
+          <a href="mailto:support@bonanzagym.kz">support@bonanzagym.kz</a> или
+          позвоните по телефону:
+          <a href="tel:+77774739438">+7 (777) 473-94-38</a>.
+        </p>
+
+        <p>
+          Наш клуб расположен по адресу:
+          <abbr title="Республика Казахстан">РК</abbr>, проспект Богенбай
+          батыра, 56, 2 этаж (ЖК «Фаворит»).
+        </p>
+
+        <p>
+          <small
+            >* Все акции и скидки действительны при предъявлении документа,
+            удостоверяющего личность.</small
+          >
+        </p>
       </section>
-
-      <aside>
-        <h2>More Information</h2>
-        <ul>
-          <li>
-            <p>Our gym is open every day from <b>8:00 a.m. to 11:00 p.m.</b></p>
-          </li>
-
-          <li>
-            <p>
-              Unlimited Access: An annual membership with access to all
-              locations in the chain is available starting at 12,500 ₸ per
-              month.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Personal Trainer Package: A special offer is available for an
-              annual membership with a personal trainer for 19,900&#8376;
-              instead of 49,900 &#8376;.
-            </p>
-          </li>
-          <li>
-            <p>
-              Gold Card: An annual Gold Card with a 12-month installment plan
-              and a <small>20%</small> discount will cost approximately 10,990 &#8376; per
-              month (depending on the terms of the specific branch).
-            </p>
-          </li>
-        </ul>
-        <hr />
-      </aside>
-
-      <article>
-        <h2>About the Club</h2>
-
-        <p>
-          Underground Gym is a <abbr title="Fitness clubs">fitness club</abbr>
-          chain in Astana. We opened our doors to provide people with a simple
-          and honest space for training: no pushy consultants, no hidden fees,
-          and no unnecessary showiness. We have modern equipment, spacious gyms,
-          and a professional team of trainers ready to support you at every
-          stage of your fitness journey.
-        </p>
-
-        <p>
-          <mark>Results come from consistency</mark>, not trendy diets or
-          one-time intensive workouts. That is why our club offers a flexible
-          membership system and open group classes. Every branch has a free
-          weights area, cardio zone, changing rooms with showers, and a
-          stretching area where you can effectively finish any workout.
-        </p>
-
-        <p>
-          We are located in different districts of the city, making it
-          convenient to train close to your home or office.
-          <em>Join Underground Gym</em> and become part of our friendly sports
-          community of people who genuinely care about their body, strength, and
-          health every day.
-        </p>
-        <hr />
-      </article>
     </main>
+
     <footer>
-      <p>Work hours: 8:00-23:00</p>
+      <hr />
+      <p>&copy; 2026 Bonanza Gym. Все права защищены.</p>
       <p>
-        Contact us on WhatsApp: <a href="https://wa.me/77471395196">chat</a>
+        С уважением Bononza Gym |
+        <a href="colophon.html">О создании сайта</a>
       </p>
-      <p>&copy; 2026 Underground Gym.</p>
     </footer>
   </body>
 </html>
