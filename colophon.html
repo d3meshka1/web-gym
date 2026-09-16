@@ -1,66 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- Author: Yerassyl Sagimgaliyev -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Colophon of the Underground Gym website — information about creation, structure, and project authors.">
-    <meta name="author" content="Yerassyl Sagimgaliyev">
-    <title>Colophon — Underground Gym</title>
-</head>
-<body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Colophon сайта Bonanza Gym. Техническая документация, инструменты и структура проекта."
+    />
+    <meta name="author" content="Yerrasyl Sagimgaliyev" />
+    <!--Author - Yerrasyl Sagimgaliyev-->
+    <title>Colophon — Bonanza Gym</title>
+  </head>
+  <body>
     <header>
-        <h1>Colophon / About the Project</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="colophon.html">Colophon</a></li>
-                <li><a href="branches.html">Branches</a></li>
-                <li><a href="membership.html">Membership</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="facilities.html">Facilities</a></li>
-            </ul>
-        </nav>
-    </header>   
+      <h1>Colophon: Как создавался сайт Bonanza Gym</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="branche.html">Клуб и расписание</a></li>
+          <li><a href="services.html">Услуги и цены</a></li>
+          <li><a href="booking.html">Записаться</a></li>
+          <li><a href="nutrition.html">Питание</a></li>
+          <li><a href="colophon.html">Как устроен сайт</a></li>
+        </ul>
+      </nav>
+    </header>
 
-   <main>
-        <section>
-            <h2>Technical Implementation &amp; Status</h2>
-            <p>This website is currently under development by student group SE-2533 for the <strong>Underground Gym</strong> in Astana. The project is implemented exclusively in pure semantic HTML5 without using Cascading Style Sheets (CSS), JavaScript, frameworks, or site builders, in strict compliance with the assignment requirements. Our primary academic goal is to master document structure, element hierarchy, and accessibility before introducing any presentation layers.</p>
-            
-            <article>
-                <h3>Team Responsibilities &amp; Current Progress</h3>
-                <p>Our team consists of two members actively working on the site architecture. We divided the workload to ensure parallel progress using version control.</p>
-                <ul>
-                    <li><strong>Student 1:</strong> Responsible for the main landing page layout, branch locations, and the membership pricing architecture (<em>pages in progress</em>).</li>
-                    <li><strong>Student 2:</strong> Responsible for the complex data presentation pages, specifically the interactive group schedule page (<a href="schedule.html">schedule.html</a>) and the comprehensive gym facilities breakdown (<a href="facilities.html">facilities.html</a> — <em>fully implemented</em>).</li>
-                </ul>
-            </article>
+    <main>
+      <section>
+        <h2>Технологический стек и окружение</h2>
+        <p>
+          Этот проект разработан в рамках курса по веб-технологиям студентами
+          группы SE-2533 Astana IT University. Проект выполнен исключительно на
+          чистом семантическом HTML5 без использования фреймворков и таблиц
+          стилей (CSS).
+        </p>
 
-            <article>
-                <h3>Source Code and Terminal Example</h3>
-                <p>We use Git for version control. Below is an example of project structure configuration and commit commands in the console:</p>
-                
-                <!-- I am using a div here because there is no specific semantic tag for grouping a preformatted code block simply for layout purposes, and section/article would incorrectly imply a standalone syndicatable block. -->
-                <div>
-                    <pre><code>git status
+        <article>
+          <h3>Обязанности команды и распределение страниц</h3>
+          <p>
+            Наша команда состоит из двух участников. Мы разделили обязанности по
+            созданию файлов и секций сайта, чтобы эффективно использовать
+            контроль версий и параллельно вести разработку.
+          </p>
+          <ul>
+            <li>
+              <strong>Kaidar Demezhan (Студент 1):</strong> Отвечает за
+              разработку главной страницы (<a href="index.html">index.html</a>)
+              с отзывами и контактами, страницу про зал и расписания (<a
+                href="branche.html"
+                >branches.html</a
+              >) а также отвечает за разработку страницы услуг и прайс-листа (<a
+                href="services.html"
+                >services.html</a
+              >),
+            </li>
+            <li>
+              <strong>Yerrasyl Sagimgaliyev(Студент 2):</strong> Отвечает за
+              техническую страницу colophon (<a href="colophon.html"
+                >colophon.html</a
+              >). интерактивной формы онлайн-бронирования (<a
+                href="booking.html"
+                >booking.html</a
+              >), а также страницы рекомендаций по спортивному питанию (<a
+                href="nutrition.html"
+                >nutrition.html</a
+              >).
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Инструменты разработчика</h3>
+          <p>
+            В процессе работы над проектом использовались следующие команды и
+            утилиты командной строки:
+          </p>
+          <pre><code>git init
 git add .
-git commit -m "Update colophon and outline upcoming pages"</code></pre>
-                </div>
+git commit -m "Initial commit for Bonanza Gym static website structure"
+git branch -M main
+git remote add origin https://github.com/bonanzagym/web-assignment.git
+git push -u origin main</code></pre>
 
-                <p>
-                    <!-- I am using a span here because I need to group these words to apply a language attribute strictly for screen readers, and no semantic inline tag like em or strong fits this structural need. -->
-                    <span lang="en">Example of keyboard input</span> (<kbd>Ctrl + C</kbd>) and system standard output (<samp>Process completed successfully</samp>) when testing local files in the browser.
-                </p>
-            </article>
-        </section>
-   </main>
+          <p>
+            Для проверки ввода данных в консоли использовалась команда
+            <kbd>Ctrl + C</kbd> или <kbd>Cmd + Option + I</kbd> для вызова
+            панели разработчика в браузере.
+          </p>
+          <p>Пример вывода успешной сборки в терминале:</p>
+          <samp
+            >Building HTML structure... OK. W3C validation passed with 0
+            errors.</samp
+          >
+        </article>
+
+
+    </main>
 
     <footer>
-        <address>
-            <p>Location: Astana, Qostanai | Phone: <a href="tel:+77471395196">+7 747 139 5196</a></p>
-        </address>
-        <p>&copy; 2026 Underground Gym. All rights reserved.</p>
+      <p>
+        &copy; 2026 Bonanza Gym. Разработано командой студенческого проекта.
+      </p>
     </footer>
-</body>
+  </body>
 </html>
