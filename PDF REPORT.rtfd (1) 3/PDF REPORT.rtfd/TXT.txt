@@ -1,45 +1,15 @@
-TASK A UNDERGROUND GYM
-1.Doctype/Meta
-Screenshot 2026-09-13 at 00.55.37.png ¬
-<!DOCTYPE html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Сеть фитнес-клубов Underground Gym в Астане и Костанае</title>
-The “lang” attribute is missing, even though the entire website is in Russian!(1.a structural issue,
-an actual website error)
-<meta name="description" content="Крупнейшая в Астане сеть фитнес-центров Underground
-GYM. 12 филиалов, финские сауны, занятия по йоге и стретчингу.">
-<meta name="keywords" content="Фитнес в Астане, Спортзал в Астане, Undeground Gym,
-Фитнес-клуб, Тренажерный зал, Underground Big, Абонемент, Тренер, Персональный
-тренер">
-<meta name="format-detection" content="telephone=no">
-2. Sematic
-No header, nav, main, section, article, aside, or footer elements were found
-The entire structure consists of a `div` (with classes for styling), plus a `script` and a `link`
-Screenshot 2026-09-13 at 00.55.59.png ¬
-3. Forms and Tables
-The form is implemented not as semantic HTML, but as a JavaScript widget—it is not
-accessible without JavaScript and is not read by screen readers as reliably as a true <form>
-with <label>
-No tables were found in the source code either; the schedule and prices were likely laid out
-using a div grid
-Screenshot 2026-09-13 at 00.56.27.png ¬
-How did you avoid this in your own code:
-You have a real, completely static HTML form—it works and is visible in the source code without
-a single line of JavaScript, using `for` and `id` for labels, `fieldset` and `legend`, and all the
-necessary `type` attributes
-4.Mistakes
-1. No lang
-2. Using `div`s instead of semantic markup—building the entire layout with `div`s—makes it
-harder to understand the page's structure (where the menu is, where the main content is, where
-the footer is)
-3. “Keywords” meta tag — an outdated, ineffective practice
-How did we avoid this in your own case
-1. We have lang ="en" in each page
-2.We have clear semantics—header, nav, main, section, article, aside, and footer are used as
-intended, and div is used only where semantics really has no place
-3.We don't have any extra meta tags—just the description and author tags
-SKETCH PHOTO
+Task A — Structural Overview & File Hierarchy
+The collaborative web project for Bonanza Gym is structured across six main HTML files, designed to provide a complete digital platform for the fitness center. The overall architecture, file distribution, and navigation are established as follows:
+- index.html: Authored by Kaidar Demezhan, this main landing page introduces the club’s facilities, client reviews wrapped in semantic quote structures (<blockquote>, <q>, <cite>, <time>), direct communication channels (mailto:, tel:), address abbreviations (<abbr>), and disclaimer notes (<small>).
+- branche.html: Authored by Kaidar Demezhan, this page details the physical club location (Bogenbai Batyr Ave 56, Astana), facility specifications (1200 m² total area), operating hours, detailed zone breakdowns, group training schedules, house rules, and a location map (<figure>).
+- services.html: Authored by Kaidar Demezhan, this page features pricing matrices, subscription levels, personal training options, and detailed service descriptions.
+- booking.html: Authored by Yerassyl Sagimgaliyev, this page features an interactive HTML form allowing visitors to register for trial visits, select preferred dates/times, pick membership plans, and submit personal details.
+- nutrition.html: Authored by Yerassyl Sagimgaliyev, this page offers dietary guidelines, nutrient target tables (<table>), sports supplement breakdowns inside description lists (<dl>, <dt>, <dd>) with embedded figures (<figure>, <figcaption>), historical quotes, and a specialized nutritionist consultation form (<form>).
+- colophon.html: Authored by Yerassyl Sagimgaliyev, this page outlines technical specifications, git workflow commands (<pre>, <code>), developer keyboard shortcuts (<kbd>), build output samples (<samp>), semantic architecture, and team member responsibility breakdowns (SE-2533 Astana IT University).
+Task B — Written Part (Semantic Analysis & Code Behavior)
+A web page is a text document structured with HTML tags that assign meaning to raw content. When a browser opens our project files, it parses the code top to bottom, building a Document Object Model (DOM) tree. It interprets these elements to render tables, lists, forms, and figures visually on the screen without needing external software.
+Across all six files of the Bonanza Gym website project (index.html, colophon.html, branche.html, services.html, booking.html, and nutrition.html), we strictly chose semantic tags over generic <div> containers to ensure proper accessibility and structure. First, in booking.html, colophon.html, and nutrition.html, I implemented a <nav> element inside the <header> so screen readers immediately identify the main site navigation block. Second, the overall page architecture relies on <main> to isolate unique content from site-wide headers and footers (<footer>). Third, in booking.html and nutrition.html, we implemented complete <form> structures with <fieldset> and <legend> containers ("Форма консультации по питанию") to logically group interactive elements, explicitly linking input labels using for attributes. In nutrition.html, advanced semantics were integrated, including data tables (<table> with <caption>, <thead>, <tbody>, scope="col", and scope="row" attributes) for macronutrient ratios, description lists (<dl>, <dd>) combined with <figure> and <figcaption> elements for sports supplements, and <blockquote> with <q>, <cite>, and <time datetime="1970"> for expert quotes. Furthermore, in colophon.html, technical semantic tags were applied, such as <pre> and <code> for Git command sequences, <kbd> for browser shortcuts, and <samp> for build outputs.
+Currently, clicking "Отправить заявку" in booking.html or "Задать вопрос" in nutrition.html triggers client-side validation for required attributes such as required, type="email", and type="tel". Because the action attribute is set to # and there is no backend server connected, submitting the form simply reloads the current page and discards user input without processing.
 
 Task B — Written Part
 A web page is a text document structured with HTML tags that assign meaning to raw content. When a browser opens our project files, it parses the code top to bottom, building a Document Object Model (DOM) tree. It interprets these elements to render tables, lists, and forms visually on the screen without needing external software.
