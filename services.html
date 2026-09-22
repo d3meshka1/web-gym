@@ -8,14 +8,21 @@
       content="Стоимость абонементов, персональных тренировок и услуг тренерского состава Bonanza Gym."
     />
     <meta name="author" content="Kaidar Demezhan" />
-        <link rel="stylesheet" href="css/base.css" />
-
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/demezhan.css" />
     <!--Author - Kaidar Demezhan-->
     <title>Услуги и цены — Bonanza Gym</title>
   </head>
   <body>
     <header>
-      <h1>Услуги и стоимость абонементов</h1>
+      <div class="header-brand">
+        <img
+          src="images/photo_2026-09-23_03-15-47-removebg-preview.png"
+          alt="Логотип Bonanza Gym"
+          class="header-logo"
+        />
+        <h1>Услуги и стоимость абонементов</h1>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html">Главная</a></li>
@@ -31,7 +38,7 @@
     <main>
       <section>
         <h2>Прайс-лист клуба Bonanza Gym</h2>
-        <p>
+        <p class="page-intro">
           Мы предлагаем гибкие условия посещения и различные виды клубных карт,
           адаптированные под ваши цели, график и бюджет. Выберите подходящий
           тариф для эффективных тренировок.
@@ -104,7 +111,8 @@
           </tbody>
         </table>
 
-        <figure>
+        <figure class="hero-figure">
+          <span class="badge">Открыто ежедневно 07:00 – 23:00</span>
           <img
             src="images/photo_2026-09-16_15-49-14.jpg"
             alt="Фотография зала"
@@ -121,16 +129,16 @@
           Для вашего максимального удобства в Bonanza Gym предусмотрены
           сопутствующие сервисы:
         </p>
-        <ul>
-          <li>
+        <ul class="zone-list">
+          <li class="zone-item">
             <strong>Заморозка абонемента:</strong> при желании вы можете
-            заморозить вам абонемент — <em>на 30 дней</em>.
+            заморозить вам абонемент — <em>на 30 дней.</em>
           </li>
-          <li>
+          <li class="zone-item">
             <strong>Фитнес для детей:</strong> специализированные детские
             тренировки.
           </li>
-          <li>
+          <li class="zone-item">
             <strong>Фитнес-бар:</strong> протеиновые коктейли, изотоники,
             аминокислоты и свежевыжатые соки (оплата по меню бара).
           </li>
@@ -144,7 +152,7 @@
           ключевыми экспертами:
         </p>
         <!-- Нумерованный список с атрибутом start / type -->
-        <ol type="I">
+        <ol type="I" class="trainer-grid">
           <li>
             <strong>Соколовский Андрей</strong> — Мастер спорта по
             пауэрлифтингу, стаж тренировок 10 лет. Специализация: силовой
@@ -181,5 +189,8 @@
     <footer>
       <p>&copy; 2026 Bonanza Gym. Все права защищены.</p>
     </footer>
+
+    <!-- Кнопка закреплена через position: fixed (см. .cta-fixed в demezhan.css) -->
+    <a class="cta-fixed" href="booking.html">Записаться</a>
   </body>
 </html>
