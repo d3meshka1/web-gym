@@ -10,9 +10,7 @@
   color: var(--color-dark);
 }
 
-body{
-   backgroung-colod: red;
-}
+
 
 /* position: relative - блок становится контейнером для абсолютного
      значка .badge: координаты top/left значка считаются от рамки фигуры,
