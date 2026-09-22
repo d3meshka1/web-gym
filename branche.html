@@ -8,14 +8,21 @@
       content="Фитнес-центр Bonanza Gym в Астане: подробная информация о клубе, зонах тренировок, расписание и правила посещения."
     />
     <meta name="author" content="Kaidar Demezhan" />
-        <link rel="stylesheet" href="css/base.css" />
-
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/demezhan.css" />
     <!--Author - Kaidar Demezhan-->
     <title>Клуб и расписание — Bonanza Gym</title>
   </head>
   <body>
     <header>
-      <h1>Наш клуб и расписание тренировок</h1>
+      <div class="header-brand">
+        <img
+          src="images/photo_2026-09-23_03-15-47-removebg-preview.png"
+          alt="Логотип Bonanza Gym"
+          class="header-logo"
+        />
+        <h1>Наш клуб и расписание тренировок</h1>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html">Главная</a></li>
@@ -31,7 +38,7 @@
     <main>
       <section>
         <h2>Спортивный зал Bonanza Gym в г. Астана</h2>
-        <p>
+        <p class="page-intro">
           Наш флагманский клуб общей площадью 1200 квадратных метров оснащен
           передовым профессиональным оборудованием ведущих мировых брендов. Мы
           создали идеальные условия для эффективных силовых, функциональных и
@@ -39,9 +46,14 @@
           информация о характеристиках и графике работы клуба.
         </p>
 
+        <p class="hours-banner">Открыто каждый день с 07:00 до 23:00</p>
+
         <!-- Таблица с данными о клубе, caption, thead, tbody, th scope -->
         <table>
-          <caption>
+          <!-- ЕДИНСТВЕННЫЙ inline-стиль на сайте (демонстрация каскада):
+               атрибут style сильнее любого селектора и переопределяет
+               caption { text-align: left } из base.css. -->
+          <caption style="text-align: center">
             Характеристики и режим работы Bonanza Gym
           </caption>
           <thead>
@@ -62,7 +74,7 @@
           </tbody>
         </table>
 
-        <figure>
+        <figure id="club-map" class="hero-figure">
           <img
             src="images/Screenshot 2026-09-16 at 15.18.19.png"
             alt="Схема расположения фитнес-центра Bonanza Gym на карте города Астана"
@@ -77,23 +89,23 @@
           Клуб разделен на несколько специализированных секторов, чтобы каждый
           посетитель мог заниматься с максимальным комфортом:
         </p>
-        <ul>
-          <li>
+        <ul class="zone-list">
+          <li class="zone-item">
             <strong>Зона свободных весов:</strong> профессиональные олимпийские
             штанги, гантельный ряд от 1 до 60 кг, силовые рамы и скамьи для
             жима.
           </li>
-          <li>
+          <li class="zone-item">
             <strong>Кардиозона:</strong> современные беговые дорожки,
             эллиптические тренажеры, велотренажеры и степперы с датчиками
             пульса.
           </li>
-          <li>
+          <li class="zone-item">
             <strong>Зона кроссфита и функционального тренинга:</strong>
             гимнастические кольца, камины, медболы, тумбы для запрыгивания и
             профессиональные покрытия.
           </li>
-          <li>
+          <li class="zone-item">
             <strong>Комфортные раздевалки:</strong> просторные шкафчики с
             электронными замками, душевые кабины и финские сауны для
             расслабления после тренировки.
@@ -157,5 +169,8 @@
     <footer>
       <p>&copy; 2026 Bonanza Gym. Все права защищены.</p>
     </footer>
+
+    <!-- Кнопка закреплена через position: fixed (см. .cta-fixed в demezhan.css) -->
+    <a class="cta-fixed" href="booking.html">Записаться</a>
   </body>
 </html>
