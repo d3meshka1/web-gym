@@ -8,8 +8,13 @@
       content="Официальный сайт фитнес-центра Bonanza Gym в Астане."
     />
     <meta name="author" content="Kaidar Demezhan" />
-        <link rel="stylesheet" href="css/base.css" />
-
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/demezhan.css" />
+    <style>
+      figcaption {
+        text-align: left;
+      }
+    </style>
     <!--Author - Kaidar Demezhan-->
     <title>Главная — Bonanza Gym</title>
   </head>
@@ -18,7 +23,14 @@
       здесь располагается шапка сайта с навигацией.
     -->
     <header>
-      <h1>Bonanza Gym — Фитнес-центр нового поколения в Астане</h1>
+      <div class="header-brand">
+        <img
+          src="images/photo_2026-09-23_03-15-47-removebg-preview.png"
+          alt="Логотип Bonanza Gym"
+          class="header-logo"
+        />
+        <h1>Bonanza Gym — Фитнес-центр нового поколения в Астане</h1>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html">Главная</a></li>
@@ -35,7 +47,8 @@
       <hr />
       <section>
         <h2>Добро пожаловать в Bonanza Gym</h2>
-        <p>
+
+        <p class="page-intro">
           Добро пожаловать в наш современный спортивный комплекс. Мы предлагаем
           уникальные условия для силовых тренировок, кроссфита и кардио. Наша
           цель — помочь вам достичь пика физической формы в комфортной
@@ -43,7 +56,8 @@
         </p>
 
         <!-- 3 изображения с осмысленным alt и подготовкой под будущие классы CSS / селекторы JS -->
-        <figure id="main-banner">
+        <figure id="main-banner" class="hero-figure">
+          <span class="badge">Открыто ежедневно 07:00 – 23:00</span>
           <img
             src="images/photo_2026-09-16_14-41-05.jpg"
             alt="Просторный тренажерный зал Bonanza Gym с современным оборудованием"
@@ -57,16 +71,32 @@
           <strong>Современное оборудование</strong> и
           <em>опытный персонал</em> гарантируют безопасность и эффективность
           занятий.
+          <img
+            class="float-photo"
+            src="images/photo_2026-09-16_15-49-14.jpg"
+            alt="Зал Bonanza Gym с тренажерами"
+          />
+          Мы регулярно обновляем инвентарь и следим за исправностью тренажёров,
+          чтобы каждая тренировка проходила безопасно и без лишних ожиданий в
+          очереди. Персонал зала всегда рядом и готов подсказать правильную
+          технику выполнения упражнений, а также скорректировать программу под
+          ваш уровень подготовки.
+        </p>
+        <p class="clear-both">
+          Хотите попробовать? Заполните
+          <a href="booking.html">форму записи на первое занятие</a>.
         </p>
       </section>
-      <section>
-        <h2>Отзывы наших клиентов</h2>
+      <section class="reviews-grid">
+        <h2 class="section-title">Отзывы наших клиентов</h2>
 
-        <article>
+        <article class="review-card">
           <blockquote>
             <figure>
               <figcaption>
-                <p>Рейтинг: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <p class="rating">
+                  Рейтинг: &#9733;&#9733;&#9733;&#9733;&#9733;
+                </p>
                 <q>Хороший зал, хорошие спокойные дружелюбные тренера👍</q>
                 <footer>
                   — Tilegen Z., <cite>постоянный клиент</cite> (<time
@@ -76,6 +106,7 @@
                 </footer>
               </figcaption>
               <img
+                class="review-avatar"
                 src="avatar/photo_2026-09-16_14-52-00.jpg"
                 alt="Аватар клиента Тилеген."
               />
@@ -83,11 +114,13 @@
           </blockquote>
         </article>
 
-        <article>
+        <article class="review-card">
           <blockquote>
             <figure>
               <figcaption>
-                <p>Рейтинг: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <p class="rating">
+                  Рейтинг: &#9733;&#9733;&#9733;&#9733;&#9733;
+                </p>
                 <q
                   >Отличный зал. Отзывчивый персонал. На просьбы и вопросы
                   обращают максимальное внимание.</q
@@ -100,6 +133,7 @@
                 </footer>
               </figcaption>
               <img
+                class="review-avatar"
                 src="avatar/photo_2026-09-16_14-51-57.jpg"
                 alt="Аватар клиента Соколовски."
               />
@@ -107,11 +141,13 @@
           </blockquote>
         </article>
 
-        <article>
+        <article class="review-card">
           <blockquote>
             <figure>
               <figcaption>
-                <p>Рейтинг: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <p class="rating">
+                  Рейтинг: &#9733;&#9733;&#9733;&#9733;&#9733;
+                </p>
                 <q>Персонал молодцы. Понравилось.</q>
                 <footer>
                   — Margarite L., <cite>член кроссфит группы</cite> (<time
@@ -121,6 +157,7 @@
                 </footer>
               </figcaption>
               <img
+                class="review-avatar"
                 src="avatar/photo_2026-09-16_14-52-03.jpg"
                 alt="Аватар клиента Маргарита."
               />
@@ -129,21 +166,21 @@
         </article>
       </section>
 
-      <section>
-        <p>
+      <section class="contact-row">
+        <p class="contact-item">
           Свяжитесь с нами напрямую по электронной почте:
           <a href="mailto:support@bonanzagym.kz">support@bonanzagym.kz</a> или
           позвоните по телефону:
           <a href="tel:+77774739438">+7 (777) 473-94-38</a>.
         </p>
 
-        <p>
+        <p class="contact-item">
           Наш клуб расположен по адресу:
           <abbr title="Республика Казахстан">РК</abbr>, проспект Богенбай
           батыра, 56, 2 этаж (ЖК «Фаворит»).
         </p>
 
-        <p>
+        <p class="contact-item">
           <small
             >* Все акции и скидки действительны при предъявлении документа,
             удостоверяющего личность.</small
@@ -156,9 +193,12 @@
       <hr />
       <p>&copy; 2026 Bonanza Gym. Все права защищены.</p>
       <p>
-        С уважением Bononza Gym |
+        С уважением Bonanza Gym |
         <a href="colophon.html">О создании сайта</a>
       </p>
     </footer>
+
+    <!-- Кнопка закреплена через position: fixed (см. .cta-fixed в demezhan.css) -->
+    <a class="cta-fixed" href="booking.html">Записаться</a>
   </body>
 </html>
