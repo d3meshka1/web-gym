@@ -8,7 +8,9 @@
       content="Рекомендации по спортивному питанию, расчету калорий и набору массы в Bonanza Gym."
     />
     <meta name="author" content="Yerrasyl Sagimgaliyev" />
-        <link rel="stylesheet" href="css/base.css" />
+    <!-- Подключение базового и личного файлов стилей -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/yerrasyl.css" />
 
     <!--author - Yerrasyl Sagimgaliyev-->
     <title>Питание и режим — Bonanza Gym</title>
@@ -29,8 +31,16 @@
     </header>
 
     <main>
-      <section>
+      <!-- ID #nutrition-hero для демонстрации position: static и уникального блока -->
+      <section id="nutrition-hero">
         <h2>Основы правильного рациона при тренировках</h2>
+        
+        <!-- Единственный инлайновый стиль по заданию для демонстрации каскада -->
+        <!-- Комментарий: Inline style используется ровно 1 раз для демонстрации приоритета над CSS -->
+        <p style="color: #ff6b1a;" class="cascade-demo-text">
+          Персональные рекомендации и расчет КБЖУ от сертифицированных специалистов Bonanza Gym.
+        </p>
+
         <p>
           Для достижения заметных результатов в тренажерном зале важна не только
           интенсивная физическая нагрузка, но и сбалансированное питание. Ниже
@@ -38,7 +48,7 @@
           базовые ориентиры для прогресса.
         </p>
 
-        <!-- Таблица норм нутриентов для разных целей -->
+        <!-- Таблица норм нутриентов -->
         <table>
           <caption>
             Ориентировочное суточное соотношение нутриентов по целям
@@ -74,69 +84,78 @@
         </table>
 
         <h3>Основные правила рациона</h3>
-        <ul>
-          <li>
-            <strong>Профицит калорий:</strong> для стабильного роста мышечных
-            волокон потребление энергии должно слегка превышать ваш суточный
-            базовый расход.
-          </li>
-          <li>
-            <strong>Достаточное количество белка:</strong> главный строительный
-            материал (куриная грудка, говядина, индейка, яйца, творог, рыба).
-          </li>
-          <li>
-            <strong>Сложные углеводы:</strong> гречка, бурый рис, овсянка и
-            макароны из твердых сортов пшеницы для поддержания высокой
-            работоспособности на тренировке.
-          </li>
-        </ul>
+        
+        <!-- Демонстрация FLOAT без создания пустых элементов -->
+        <img
+          src="images/creatine-monohydrate.jpg"
+          alt="Спортивное питание"
+          class="float-nutrition-img"
+        />
+        <p>
+          <strong>Профицит калорий и гидратация:</strong> для стабильного роста мышечных
+          волокон потребление энергии должно слегка превышать ваш суточный
+          базовый расход. Важную роль играет регулярное потребление воды и поддержание
+          высокого уровня запасов АТФ во время интенсивных силовых сессий.
+        </p>
+        <p>
+          <strong>Достаточное количество белка:</strong> главный строительный
+          материал (куриная грудка, говядина, индейка, яйца, творог, рыба).
+        </p>
+      </section>
 
-        <section>
-          <h3>Популярные спортивные добавки</h3>
-          <dl>
-            <dt></dt>
-            <dd>
-              <figure>
-                <img
-                  src="images/creatine-monohydrate.jpg"
-                  alt="Банка с креатином моногидратом"
-                />
-                <figcaption>Креатин моногидрат в порошке.</figcaption>
-              </figure>
-              Способствует росту силовых показателей, увеличению запасов АТФ и
-              гидратации мышечных клеток.
-            </dd>
-
-            <dt></dt>
-            <dd>
-              <figure>
-                <img
-                  src="images/protein.jpeg"
-                  alt="Спортивный шейкер и банка сывороточного протеина"
-                />
-                <figcaption>
-                  Сывороточный протеин для восстановления.
-                </figcaption>
-              </figure>
-              Удобный и быстрый источник качественного белка для закрытия
-              белкового окна после нагрузок.
-            </dd>
-
-            <dt></dt>
-            <dd>
-              <figure>
-                <img src="images/d3.jpg" alt="Капсулы Омега-3 и витамина D3" />
-                <figcaption>
-                  Витаминные комплексы для суставов и иммунитета.
-                </figcaption>
-              </figure>
-              Поддерживают здоровье сердечно-сосудистой системы, суставов и
-              общий гормональный фон.
-            </dd>
-          </dl>
-        </section>
+      <!-- Секция спортивных добавок на CSS GRID без wrapper div -->
+      <section class="supplement-grid">
+        <!-- Класс с clear: both висит прямо на заголовке (без пустых тегов) -->
+        <h3 class="clear-nutrition-flow grid-full-width">Популярные спортивные добавки</h3>
+        
+        <!-- Главная карточка, занимающая 2 колонки (grid-column: span 2) -->
+        <article class="featured-supplement">
+          <h4>Креатин моногидрат</h4>
+          <figure>
+            <img
+              src="images/creatine-monohydrate.jpg"
+              alt="Банка с креатином моногидратом"
+            />
+            <figcaption>Креатин моногидрат в порошке.</figcaption>
+          </figure>
+          <p>
+            Способствует росту силовых показателей, увеличению запасов АТФ и
+            гидратации мышечных клеток.
+          </p>
+        </article>
 
         <article>
+          <h4>Сывороточный протеин</h4>
+          <figure>
+            <img
+              src="images/protein.jpeg"
+              alt="Спортивный шейкер и банка сывороточного протеина"
+            />
+            <figcaption>
+              Сывороточный протеин для восстановления.
+            </figcaption>
+          </figure>
+          <p>
+            Удобный и быстрый источник качественного белка для закрытия
+            белкового окна после нагрузок.
+          </p>
+        </article>
+
+        <article>
+          <h4>Витамины и Омега-3</h4>
+          <figure>
+            <img src="images/d3.jpg" alt="Капсулы Омега-3 и витамина D3" />
+            <figcaption>
+              Витаминные комплексы для суставов и иммунитета.
+            </figcaption>
+          </figure>
+          <p>
+            Поддерживают здоровье сердечно-сосудистой системы, суставов и
+            общий гормональный фон.
+          </p>
+        </article>
+
+        <article class="grid-full-width">
           <h4>Цитата эксперта по питанию</h4>
           <blockquote>
             <q
@@ -145,7 +164,7 @@
             >
             <footer>
               — Винсу Жиронде,
-              <cite>запись <time datetime="1970-xx-xx">1970</time> года</cite>
+              <cite>запись <time datetime="1970-01-01">1970</time> года</cite>
             </footer>
           </blockquote>
         </article>
@@ -157,11 +176,12 @@
           Если вы не знаете, как составить личный КБЖУ-план, отправьте заявку на
           консультацию:
         </p>
+
         <form action="#" method="POST">
           <fieldset>
             <legend>Форма консультации по питанию</legend>
             <p>
-              <label for="nutri-name">Имя:</label><br />
+              <label for="nutri-name" class="required-label">Имя:</label><br />
               <input
                 type="text"
                 id="nutri-name"
@@ -171,7 +191,7 @@
               />
             </p>
             <p>
-              <label for="phone">Номер телефона:</label><br />
+              <label for="phone" class="required-label">Номер телефона:</label><br />
               <input
                 type="tel"
                 id="phone"
@@ -181,7 +201,7 @@
               />
             </p>
             <p>
-              <label for="nutri-question">Ваш вопрос по рациону:</label><br />
+              <label for="nutri-question" class="required-label">Ваш вопрос по рациону:</label><br />
               <textarea
                 id="nutri-question"
                 name="nutri_question"
@@ -191,13 +211,17 @@
                 required
               ></textarea>
             </p>
-            <p>
-              <button type="submit">Задать вопрос</button>
+            <p class="form-actions-wrapper">
+              <button type="submit" class="btn-submit-custom">Задать вопрос</button>
             </p>
           </fieldset>
         </form>
       </section>
     </main>
+
+    <!-- Плавающая кнопка с position: fixed -->
+    <a href="tel:+77774739438" class="quick-booking-btn">📞 Позвонить в зал</a>
+  
 
     <footer>
       <p>&copy; 2026 Bonanza Gym. Все права защищены.</p>
