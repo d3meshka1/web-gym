@@ -1,0 +1,276 @@
+/* ============================================================
+   yerrasyl.css — личный файл Yerrasyl Sagimgaliyev
+   Страницы: booking.html, nutrition.html, colophon.html
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   ЦВЕТОВАЯ ПАЛИТРА (5 цветов по правилам задания):
+   1. #14181f (HEX) — тёмный графит для текста, заголовков и фона.
+   2. #ff6b1a (HEX) — ярко-оранжевый акцент для кнопок, плашек и бейджей.
+   3. #f4f5f7 (HEX) — светло-серый фон для подложек и карточек.
+   4. rgba(20, 24, 31, 0.08) (RGBA) — мягкая полупрозрачная тень для блоков.
+   5. white (Именованный цвет / Named color) — чистый белый фон карточек.
+   ------------------------------------------------------------ */
+
+/* --- Универсальный селектор (*) --- */
+
+*::selection{
+    background-color:#ff6b1a;
+    color:black;
+}
+
+/* --- Селектор типа (Type selector) --- */
+code {
+  padding: 0.2rem 0.4rem;
+  border-radius: 10px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+/* --- Селекторы ID (#) с обоснованием выборa --- */
+
+/* #booking-section: Единственная и главная форма бронирования на странице booking.html */
+#booking-section {
+  position: relative; /* Служит контекстом позиционирования для бейджа .form-badge-accent */
+  padding: 1.5rem;
+  border: 1px solid var(--color-muted);
+  border-radius: 8px;
+  background-color: var(--color-white);
+}
+
+/* #nutrition-hero: Уникальный заголовочный баннер страницы питания */
+#nutrition-hero {
+  /* Позиционирование STATIC: элемент находится в стандартном естественном потоке документа */
+  position: static;
+  margin-bottom: 8rem;
+}
+
+
+/* ============================================================
+   ПОЗИЦИОНИРОВАНИЕ И ПЛАВАЮЩИЕ ЭЛЕМЕНТЫ
+   ============================================================ */
+
+/* --- Relative & Absolute Positioning --- */
+.booking-card {
+  position: relative;
+}
+
+.form-badge-accent {
+  position: absolute;
+  top: -10px;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* --- Fixed Positioning --- */
+.quick-booking-btn {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  border: 2px solid var(--color-accent);
+  border-radius: 999px;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(20, 24, 31, 0.2);
+}
+
+.quick-booking-btn:hover,
+.quick-booking-btn:focus {
+  background-color: var(--color-dark);
+  color: var(--color-accent);
+}
+
+/* --- Float & Clear --- */
+.float-nutrition-img {
+  float: left;
+  width: 220px;
+  height: 160px;
+  margin: 0 1.25rem 0.75rem 0;
+  object-fit: cover;
+  border: 3px solid var(--color-white);
+  border-radius: 6px;
+  outline: 1px solid var(--color-muted);
+}
+
+/* Комментарий к CLEAR: Применен к следующему заголовочному тегу h3, чтобы отменить 
+   обтекание картинки и предотвратить наложение элементов без создания пустых тегов. */
+.clear-nutrition-flow {
+  clear: both;
+}
+
+
+/* ============================================================
+   3 ТЕХНИКИ ЦЕНТРИРОВАНИЯ
+   ============================================================ */
+
+/* Техника 1: MARGIN AUTO — подходит для блочных элементов с заданной шириной */
+.center-margin-block {
+  display: block;
+  max-width: 500px;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+/* Техника 2: FLEXBOX — идеальный вариант для выравнивания содержимого по центру */
+.center-flex-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3.5rem;
+  border-radius: 6px;
+  background-color: var(--color-bg);
+}
+
+/* Техника 3: GRID (place-items: center) — компактное лаконичное центрирование */
+.center-grid-block {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+
+/* ============================================================
+   ВЕРСТКА FLEXBOX (booking.html)
+   ============================================================ */
+
+.booking-fields-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.booking-field-item {
+  flex: 1 1 220px;
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--color-muted);
+  border-radius: 6px;
+  background-color: var(--color-bg);
+}
+
+
+/* ============================================================
+   ВЕРСТКА GRID (nutrition.html)
+   ============================================================
+   ОБОСНОВАНИЕ GRID ВМЕСТО FLEXBOX:
+   Для каталога спортивных добавок нужна строгая двумерная сетка со строками и 
+   колонками, где карточки ровняются по двум осям, а главный товар (.featured-supplement) 
+   растягивается сразу на 2 колонки. Flexbox не может контролировать 2 оси одновременно.
+   ============================================================ */
+
+.supplement-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.grid-full-width {
+  grid-column: 1 / -1;
+}
+
+/* Элемент Grid, занимающий более 1 колонки */
+.featured-supplement {
+  grid-column: span 2;
+  border-top: 4px solid var(--color-accent);
+  border-radius: 6px;
+  background-color: white; /* Использован 1 именованный цвет */
+  padding: 1rem;
+}
+
+/* Дочерний селектор (>) */
+.supplement-grid > article {
+  padding: 1rem;
+  border: 1px solid var(--color-muted);
+  border-radius: 6px;
+  background-color: var(--color-bg);
+}
+
+/* Псевдокласс :nth-child() — подсвечиваем каждый второй элемент */
+.supplement-grid > article:nth-child(even) {
+  border-left: 3px solid var(--color-accent);
+}
+
+
+/* ============================================================
+   РАЗНООБРАЗИЕ СЕЛЕКТОРОВ
+   ============================================================ */
+
+/* Потомственный селектор (Descendant) */
+.colophon-card article p {
+  color: var(--color-dark);
+}
+
+/* Соседний селектор (+) */
+label + input {
+  margin-top: 0.2rem;
+}
+
+/* Группировка через запятую (,) */
+.btn-submit-custom,
+.btn-reset-custom {
+  padding: 0.65rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Селектор атрибута ([attr]) */
+input[required] {
+  border-left: 3px solid var(--color-accent);
+}
+
+/* Псевдоэлемент ::before */
+.required-label::before {
+  content: "* ";
+  color: var(--color-accent);
+}
+
+
+/* ============================================================
+   ЭКСПЕРИМЕНТ СО СПЕЦИФИЧНОСТЬЮ (Specificity Experiment)
+   ============================================================ */
+
+/* Правило 1: Специфичность (0, 0, 1, 0) — Одиночный класс.
+   РЕЗУЛЬТАТ: ПРОИГРЫВАЕТ Правилу 2, так как его специфичность ниже. */
+.btn-submit-custom {
+  background-color: #ff6b1a;
+  color: #14181f;
+}
+
+/* Правило 2: Специфичность (0, 0, 2, 0) — Два класса с вложенностью.
+   РЕЗУЛЬТАТ: ПОБЕЖДАЕТ Правило 1, так как (0, 0, 2, 0) > (0, 0, 1, 0). */
+.form-actions-wrapper .btn-submit-custom {
+  background-color: #14181f;
+  color: #ff6b1a;
+}
+
+/* Разрешение конфликта специфичности (без !important):
+   Селектор (0, 1, 1, 0) с использованием ID перекрывает Правило 2. */
+#booking-section .btn-submit-custom {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+
+/* ============================================================
+   Единственное использование !IMPORTANT
+   ============================================================
+   ОБОСНОВАНИЕ: Принудительно гарантирует темный цвет текста уведомления 
+   для соблюдения контрастности доступности независимо от каскада. */
+.accessibility-notice {
+  color: #14181f !important;
+  font-size: 0.85rem;
+}
