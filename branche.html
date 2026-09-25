@@ -8,169 +8,236 @@
       content="Фитнес-центр Bonanza Gym в Астане: подробная информация о клубе, зонах тренировок, расписание и правила посещения."
     />
     <meta name="author" content="Kaidar Demezhan" />
+    <!-- Bootstrap v5.3.3 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/demezhan.css" />
     <!--Author - Kaidar Demezhan-->
     <title>Клуб и расписание — Bonanza Gym</title>
   </head>
   <body>
-    <header>
-      <div class="header-brand">
+    <header class="py-3 text-center">
+      <div
+        class="header-brand d-flex align-items-center justify-content-center gap-3 mb-3"
+      >
         <img
           src="images/photo_2026-09-23_03-15-47-removebg-preview.png"
           alt="Логотип Bonanza Gym"
           class="header-logo"
         />
-        <h1>Наш клуб и расписание тренировок</h1>
+        <h1 class="text-white m-0">Наш клуб и расписание тренировок</h1>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="branche.html">Клуб и расписание</a></li>
-          <li><a href="services.html">Услуги и цены</a></li>
-          <li><a href="booking.html">Записаться</a></li>
-          <li><a href="nutrition.html">Питание</a></li>
-          <li><a href="colophon.html">Как устроен сайт</a></li>
-        </ul>
+      <nav
+        class="navbar navbar-expand-lg p-0 justify-content-center navbar-dark"
+      >
+        <div class="container-fluid justify-content-center">
+          <button
+            class="navbar-toggler text-white border-white bg-dark mb-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Переключить навигацию"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <ul
+              class="d-flex flex-wrap justify-content-center align-items-center row-gap-3 column-gap-4 list-unstyled m-0 p-0 mb-0 navbar-nav"
+            >
+              <li class="nav-item">
+                <a class="text-white nav-link px-3" href="index.html"
+                  >Главная</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="text-white nav-link px-3" href="branche.html"
+                  >Клуб и расписание</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="text-white nav-link px-3" href="services.html"
+                  >Услуги и цены</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="text-white nav-link px-3" href="booking.html"
+                  >Записаться</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="text-white nav-link px-3" href="nutrition.html"
+                  >Питание</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="text-white nav-link px-3" href="colophon.html"
+                  >Как устроен сайт</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <section>
-        <h2>Спортивный зал Bonanza Gym в г. Астана</h2>
+    <main class="container mx-auto my-4">
+      <section class="mb-4 p-4 rounded bg-white">
+        <h2 class="text-center text-md-start">
+          Спортивный зал Bonanza Gym в г. Астана
+        </h2>
         <p class="page-intro">
           Наш флагманский клуб общей площадью 1200 квадратных метров оснащен
           передовым профессиональным оборудованием ведущих мировых брендов. Мы
           создали идеальные условия для эффективных силовых, функциональных и
-          кардиотренировок в комфортной атмосфере. Ниже представлена подробная
-          информация о характеристиках и графике работы клуба.
+          кардиотренировок.
         </p>
 
-        <p class="hours-banner">Открыто каждый день с 07:00 до 23:00</p>
+        <p
+          class="hours-banner d-flex justify-content-center align-items-center my-3 fw-bold rounded"
+        >
+          Открыто каждый день с 07:00 до 23:00
+        </p>
 
-        <!-- Таблица с данными о клубе, caption, thead, tbody, th scope -->
-        <table>
-          <!-- ЕДИНСТВЕННЫЙ inline-стиль на сайте (демонстрация каскада):
-               атрибут style сильнее любого селектора и переопределяет
-               caption { text-align: left } из base.css. -->
-          <caption style="text-align: center">
-            Характеристики и режим работы Bonanza Gym
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">Объект</th>
-              <th scope="col">Адрес</th>
-              <th scope="col">Режим работы</th>
-              <th scope="col">Общая площадь (м<sup>2</sup>)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Bonanza Gym</th>
-              <td>проспект Богенбай батыра, 56</td>
-              <td>Пн-Вс: 07:00 – 23:00</td>
-              <td>1200</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table table-bordered my-3">
+            <caption class="text-center text-md-start py-2">
+              Характеристики и режим работы Bonanza Gym
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Объект</th>
+                <th scope="col">Адрес</th>
+                <th scope="col">Режим работы</th>
+                <th scope="col">Общая площадь (м<sup>2</sup>)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Bonanza Gym</th>
+                <td>проспект Богенбай батыра, 56</td>
+                <td>Пн-Вс: 07:00 – 23:00</td>
+                <td>1200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-        <figure id="club-map" class="hero-figure">
+        <figure
+          id="club-map"
+          class="hero-figure my-4 mx-auto p-2 rounded img-fluid"
+        >
           <img
             src="images/Screenshot 2026-09-16 at 15.18.19.png"
             alt="Схема расположения фитнес-центра Bonanza Gym на карте города Астана"
+            class="img-fluid"
           />
-          <figcaption>Расположение фитнес-центра на карте города.</figcaption>
+          <figcaption class="text-center">
+            Расположение фитнес-центра на карте города.
+          </figcaption>
         </figure>
       </section>
 
-      <section>
+      <section class="mb-4 p-4 rounded bg-white">
         <h2>Зоны нашего фитнес-центра</h2>
         <p>
           Клуб разделен на несколько специализированных секторов, чтобы каждый
           посетитель мог заниматься с максимальным комфортом:
         </p>
-        <ul class="zone-list">
-          <li class="zone-item">
-            <strong>Зона свободных весов:</strong> профессиональные олимпийские
-            штанги, гантельный ряд от 1 до 60 кг, силовые рамы и скамьи для
-            жима.
-          </li>
-          <li class="zone-item">
-            <strong>Кардиозона:</strong> современные беговые дорожки,
-            эллиптические тренажеры, велотренажеры и степперы с датчиками
-            пульса.
-          </li>
-          <li class="zone-item">
-            <strong>Зона кроссфита и функционального тренинга:</strong>
-            гимнастические кольца, камины, медболы, тумбы для запрыгивания и
-            профессиональные покрытия.
-          </li>
-          <li class="zone-item">
-            <strong>Комфортные раздевалки:</strong> просторные шкафчики с
-            электронными замками, душевые кабины и финские сауны для
-            расслабления после тренировки.
-          </li>
-        </ul>
+
+        <!-- Замена ручных flex-правил на Bootstrap grid -->
+        <div class="row g-3 my-3">
+          <div class="col-12 col-md-6">
+            <div
+              class="zone-item d-flex flex-column gap-1 p-3 rounded h-100 border bg-light"
+            >
+              <strong>Зона свободных весов:</strong> профессиональные
+              олимпийские штанги, гантельный ряд от 1 до 60 кг, силовые рамы.
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div
+              class="zone-item d-flex flex-column gap-1 p-3 rounded h-100 border bg-light"
+            >
+              <strong>Кардиозона:</strong> современные беговые дорожки,
+              эллиптические тренажеры, велотренажеры с датчиками пульса.
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div
+              class="zone-item d-flex flex-column gap-1 p-3 rounded h-100 border bg-light"
+            >
+              <strong>Зона кроссфита:</strong> гимнастические кольца, камины,
+              медболы, тумбы для запрыгивания и профессиональные покрытия.
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div
+              class="zone-item d-flex flex-column gap-1 p-3 rounded h-100 border bg-light"
+            >
+              <strong>Комфортные раздевалки:</strong> просторные шкафчики с
+              электронными замками, душевые кабины и финские сауны.
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section>
+      <section class="mb-4 p-4 rounded bg-white">
         <h2>Расписание групповых направлений</h2>
-        <!-- Списки: вложенный список и список определений -->
-        <ul>
+        <ul class="pl-4">
           <li>
             Утренние программы
-            <ul>
+            <ul class="pl-4">
               <li>08:00 — Йога и стретчинг (Зал групповых программ)</li>
               <li>09:30 — Функциональный тренинг (Кроссфит зона)</li>
             </ul>
           </li>
           <li>
             Вечерние программы
-            <ul>
+            <ul class="pl-4">
               <li>18:00 — Тяжелая атлетика (Соревновательный зал)</li>
               <li>19:30 — Интервальный кардио-комплекс (Кардиозона)</li>
             </ul>
           </li>
         </ul>
 
-        <h3>Правила посещения зала</h3>
+        <h3 class="mt-4">Правила посещения зала</h3>
         <p>
-          Для вашей безопасности и комфорта всех гостей просим соблюдать
-          внутренний регламент клуба:
+          Для вашей безопасности и комфорта просим соблюдать регламент клуба:
         </p>
-        <ol>
+        <ol class="pl-4">
           <li>
-            Обязательно используйте сменную спортивную обувь и чистую спортивную
-            одежду.
+            Обязательно используйте сменную спортивную обувь и чистую одежду.
           </li>
           <li>Используйте полотенце во время работы на тренажерах.</li>
-          <li>
-            После завершения упражнений возвращайте гантели, блины и инвентарь
-            на специальные стойки.
-          </li>
+          <li>После завершения упражнений возвращайте инвентарь на стойки.</li>
         </ol>
 
-        <h3>Глоссарий терминов</h3>
+        <h3 class="mt-4">Глоссарий терминов</h3>
         <dl>
-          <dt>CrossFit</dt>
-          <dd>
-            Система высокоинтенсивных функциональных движений, направленных на
-            развитие силы и общей физической выносливости.
+          <dt class="fw-bold">CrossFit</dt>
+          <dd class="ms-4 mb-3">
+            Система высокоинтенсивных функциональных движений для развития силы.
           </dd>
-          <dt>Stretching</dt>
-          <dd>
-            Комплекс упражнений, направленный на растяжку мышц и повышение
-            эластичности связок.
+          <dt class="fw-bold">Stretching</dt>
+          <dd class="ms-4 mb-3">
+            Комплекс упражнений для растяжки мышц и повышения эластичности.
           </dd>
         </dl>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Bonanza Gym. Все права защищены.</p>
+    <footer class="py-4 text-center text-white bg-dark">
+      <p class="m-0">&copy; 2026 Bonanza Gym. Все права защищены.</p>
     </footer>
 
-    <!-- Кнопка закреплена через position: fixed (см. .cta-fixed в demezhan.css) -->
-    <a class="cta-fixed" href="booking.html">Записаться</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
