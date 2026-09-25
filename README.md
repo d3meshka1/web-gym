@@ -1,13 +1,32 @@
-Bonanza Gym — Website
-A static HTML website for Bonanza Gym, built as part of the Assignment 1 — HTML Basics coursework.
+Bonanza Gym — Web Technologies Assignment 3
 
-Team Members:
-Kaidar Demezhan - SE - 2533
-Yerassyl Sagimgaliyev - SE - 2533
+Project Overview
 
+This project is a continuation of the Bonanza Gym website created for previous Web Technologies assignments. Assignment 3 focuses on rebuilding and improving the existing layout with Bootstrap while preserving the original structure, content, visual identity, and overall design of the website.
 
-Theme
-Bonanza Gym — a premier fitness center located in Astana, Kazakhstan. This project provides details about our club zones, group schedules, pricing tiers, online booking, sports nutrition guidelines, customer feedback.
+The main goal of this version is to use Bootstrap for layout, responsiveness, spacing, navigation, buttons, utilities, and reusable components, while keeping custom CSS only for small design corrections and project-specific styling.
+
+The website is designed for a fitness club called Bonanza Gym located in Astana.
+
+Student Information
+
+Student: Kaidar Demezhan
+
+Course: Introduction to Web Technologies
+
+Assignment: Assignment 3
+
+Project: Bonanza Gym
+
+Technologies Used
+
+The project uses the following technologies:
+
+HTML5
+
+CSS3
+
+Bootstrap 5.3.3
 
 ## Project Structure
 
@@ -17,9 +36,12 @@ bonanza_project/
 │   └── ...
 ├── avatar/
 │   └── ...
+├── css/
+│   └── ...
 ├── booking.html
 ├── branches.html
 ├── colophon.html
+├── css-cleanup.txt
 ├── index.html
 ├── nutrition.html
 ├── services.html
