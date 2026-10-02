@@ -1,18 +1,18 @@
-/* base.css - общий файл Bonanza Gym */
+/* base.css — общие стили Bonanza Gym.
+   Сетка, отступы и адаптивные колонки остаются в Bootstrap. */
 :root {
   --color-dark: #14181f;
   --color-accent: #ff6b1a;
   --color-bg: #f4f5f7;
   --color-muted: #5b6472;
   --color-white: #ffffff;
-
-  /* Два шрифта с полными запасными стеками */
+  --color-error: #a12622;
+  --color-success: #146c43;
   --font-heading: "Arial Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-body: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: "Courier New", Consolas, monospace;
 }
 
-/* --- Селектор: тип (body) --- */
 body {
   font-family: var(--font-body);
   line-height: 1.6;
@@ -21,33 +21,31 @@ body {
   background-color: var(--color-bg);
 }
 
-/* --- Селектор: группировка через запятую ---
-   Общие правила для всех заголовков сразу. */
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-family: var(--font-heading);
   font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--color-dark);
+  overflow-wrap: break-word;
 }
 
-/* ШАПКА, НАВИГАЦИЯ, ОСНОВНАЯ ЧАСТЬ, ПОДВАЛ */
-
-header {
+/* Общая шапка. Перенос логотипа и заголовка задают классы Bootstrap. */
+body > header {
   background-color: var(--color-dark);
   border-bottom: 4px solid var(--color-accent);
 }
 
-/* Блок с логотипом и заголовком */
-
 .header-logo {
+  width: auto;
+  max-width: 100%;
   max-height: 50px;
+  object-fit: contain;
 }
 
 header h1 {
+  min-width: 0;
   color: var(--color-white);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 nav a {
@@ -55,12 +53,37 @@ nav a {
   color: var(--color-white);
 }
 
-/* --- Псевдоклассы :hover и :focus ---
-   Совпадают, когда на ссылку навели мышь или перешли клавишей Tab. */
+.navbar .nav-link {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
 nav a:hover,
-nav a:focus {
+nav a:focus-visible,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible,
+.navbar .nav-link.is-active,
+.navbar .nav-link[aria-current="page"] {
   color: var(--color-accent);
   border-color: var(--color-accent);
+}
+
+/* Клавиатурный доступ: Tab показывает ссылку перехода к основному содержимому. */
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1100;
+  max-width: calc(100% - 1rem);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 main.container {
@@ -69,16 +92,23 @@ main.container {
   margin-bottom: 2rem;
 }
 
-/* Секции - белые карточки на светлом фоне. */
 main > section {
   background-color: var(--color-white);
   border: 1px solid var(--color-muted);
 }
 
-/* Селектор: соседний (+)
-   h2 + p - абзац, стоящий сразу после заголовка h2. */
 h2 + p {
   color: var(--color-muted);
+}
+
+/* Используется не только на страницах Демежана, поэтому находится в base.css. */
+.page-intro {
+  font-size: 1.15rem;
+  color: var(--color-dark);
+}
+
+[id] {
+  scroll-margin-top: 1rem;
 }
 
 hr {
@@ -86,7 +116,6 @@ hr {
   border-top: 1px solid var(--color-muted);
 }
 
-/* Подвал: тёмный, как шапка, для симметрии страницы. */
 body > footer {
   background-color: var(--color-dark);
   color: var(--color-white);
@@ -101,18 +130,17 @@ body > footer hr {
   display: none;
 }
 
-/* ССЫЛКИ, ТЕКСТ, ИЗОБРАЖЕНИЯ */
-
+/* Ссылки, текст и изображения. */
 a {
   color: var(--color-accent);
+  text-underline-offset: 0.15em;
 }
 
-/* Селектор атрибута */
 a[href^="mailto:"] {
   text-decoration-style: dotted;
+  overflow-wrap: anywhere;
 }
 
-/* Псевдоэлемент ::before */
 a[href^="tel:"]::before {
   content: "\260E\00a0";
 }
@@ -123,6 +151,8 @@ small {
 }
 
 img {
+  max-width: 100%;
+  height: auto;
   border-radius: 6px;
 }
 
@@ -140,24 +170,14 @@ blockquote {
   background-color: var(--color-bg);
 }
 
-q::before {
-  content: "\00ab";
-}
+q::before { content: "\00ab"; }
+q::after { content: "\00bb"; }
+cite { color: var(--color-muted); }
+/* Не сбрасываем margin-top у колонок .row: он нужен для Bootstrap gutters. */
+main ul:not(.row) > li:first-child,
+main ol:not(.row) > li:first-child { margin-top: 0; }
 
-q::after {
-  content: "\00bb";
-}
-
-cite {
-  color: var(--color-muted);
-}
-
-li:first-child {
-  margin-top: 0;
-}
-
-/* ТАБЛИЦЫ */
-
+/* Таблица прокручивается только внутри table-responsive, а не вся страница. */
 caption {
   color: var(--color-muted);
   font-weight: 600;
@@ -169,13 +189,20 @@ thead th {
   color: var(--color-white);
 }
 
-td:last-child {
-  text-align: right;
+.table > thead {
+  --bs-table-bg: var(--color-dark);
+  --bs-table-color: var(--color-white);
 }
 
-/* ФОРМЫ */
+/* Правое выравнивание цены задаётся text-end в HTML,
+   а не всем последним ячейкам каждой таблицы сайта. */
+.table-responsive {
+  max-width: 100%;
+}
 
+/* Формы: общие стили не меняют разметку страниц других участников. */
 fieldset {
+  min-width: 0;
   padding: 1rem 1.25rem;
   border: 2px solid var(--color-muted);
   border-radius: 6px;
@@ -186,34 +213,115 @@ legend {
   font-weight: 700;
 }
 
-label {
-  font-weight: 600;
+label { font-weight: 600; }
+textarea { max-width: 100%; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex="0"]:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid var(--color-accent);
   border-color: var(--color-accent);
 }
 
-button:hover,
-button:focus {
-  background-color: var(--color-dark);
-  color: var(--color-accent);
+/* Темизация Bootstrap через переменные — без глобального button:hover. */
+.btn-primary {
+  --bs-btn-color: var(--color-dark);
+  --bs-btn-bg: var(--color-accent);
+  --bs-btn-border-color: var(--color-accent);
+  --bs-btn-hover-color: var(--color-accent);
+  --bs-btn-hover-bg: var(--color-dark);
+  --bs-btn-hover-border-color: var(--color-dark);
+  --bs-btn-active-color: var(--color-accent);
+  --bs-btn-active-bg: var(--color-dark);
+  --bs-btn-active-border-color: var(--color-dark);
+  --bs-btn-disabled-color: var(--color-dark);
+  --bs-btn-disabled-bg: var(--color-accent);
+  --bs-btn-disabled-border-color: var(--color-accent);
+  --bs-btn-focus-shadow-rgb: 255, 107, 26;
 }
 
-button[type="reset"] {
-  background-color: transparent;
-  color: var(--color-dark);
+.btn-outline-warning {
+  --bs-btn-color: var(--color-accent);
+  --bs-btn-border-color: var(--color-accent);
+  --bs-btn-hover-color: var(--color-white);
+  --bs-btn-hover-bg: var(--color-dark);
+  --bs-btn-hover-border-color: var(--color-white);
+  --bs-btn-active-color: var(--color-white);
+  --bs-btn-active-bg: var(--color-dark);
+  --bs-btn-active-border-color: var(--color-white);
 }
 
-/* МОНОШИРИННЫЕ ЭЛЕМЕНТЫ */
+/* Состояния для следующих заданий. Сами классы не добавляют JavaScript.
+   !important нужен только для скрытия поверх display-утилит Bootstrap. */
+[hidden], .is-hidden {
+  display: none !important;
+}
 
-pre,
-code,
-kbd,
-samp {
+.is-active {
+  border-color: var(--color-accent);
+}
+
+.is-selected {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+  background-color: #fff3eb;
+}
+
+.table tr.is-selected > * {
+  --bs-table-bg: #fff3eb;
+  --bs-table-striped-bg: #fff3eb;
+  --bs-table-color: var(--color-dark);
+}
+
+.is-error {
+  color: var(--color-error);
+  background-color: #fff1f0;
+  border: 1px solid var(--color-error);
+}
+
+.is-success {
+  color: var(--color-success);
+  background-color: #edf8f1;
+  border: 1px solid var(--color-success);
+}
+
+[aria-invalid="true"] {
+  border-color: var(--color-error);
+}
+
+.status-message {
+  margin: 0;
+  border-radius: 6px;
+}
+
+.status-message:empty {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.status-message:not(:empty) {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.result-panel {
+  border: 1px solid var(--color-muted);
+  border-left: 4px solid var(--color-accent);
+  background-color: var(--color-bg);
+}
+
+/* Моноширинные элементы сохранены для общих страниц сайта. */
+pre, code, kbd, samp {
   font-family: var(--font-mono);
   font-size: 0.9rem;
 }
