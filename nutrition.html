@@ -21,7 +21,7 @@
   </head>
   <body>
     <!-- Фирменная шапка Bonanza Gym -->
-    <header class="py-3 text-center">
+    <header id="top" class="py-3 text-center">
       <div
         class="header-brand d-flex align-items-center justify-content-center gap-3 mb-3"
       >
@@ -35,7 +35,6 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark p-0 justify-content-center">
         <div class="container-fluid justify-content-center">
-          <!-- Кнопка-гамбургер -->
           <button
             class="navbar-toggler text-white border-white bg-black mb-2"
             type="button"
@@ -48,7 +47,6 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <!-- Выпадающее меню -->
           <div
             class="collapse navbar-collapse justify-content-center"
             id="navbarNav"
@@ -70,7 +68,7 @@
                 <a href="nutrition.html" class="nav-link rounded-1 px-3 active" aria-current="page">Питание</a>
               </li>
               <li class="nav-item">
-                <a href="colophon.html" class="nav-link rounded-1 px-3">О нас</a>
+                <a href="about.html" class="nav-link rounded-1 px-3">О нас</a>
               </li>
             </ul>
           </div>
@@ -80,8 +78,16 @@
     
     <!-- Главное содержимое страницы -->
     <main class="container mx-auto my-4">
+      
+      <!-- Интерактивная баннер-акция -->
+      <div id="nutrition-promo-alert" class="alert alert-warning alert-dismissible fade show border-0 shadow-sm mb-4 fw-medium" role="alert">
+        ⚡ <strong>Спецпредложение:</strong> Получите бесплатную персональную консультацию нутрициолога при записи на первую тренировку!
+        <a href="booking.html" class="alert-link text-decoration-underline ms-2">Записаться сейчас &rarr;</a>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть уведомление"></button>
+      </div>
+
       <!-- Секция 1: Рацион и Таблица КБЖУ -->
-      <section class="mb-4 p-4 rounded bg-white">
+      <section id="nutrition-basics-section" class="mb-4 p-4 rounded bg-white">
         <h2 class="text-center text-md-start">Основы правильного рациона при тренировках</h2>
         <p class="page-intro">
           Для достижения заметных результатов в тренажерном зале важна не только
@@ -91,7 +97,7 @@
         </p>
 
         <div class="table-responsive">
-          <table class="table my-4 table-striped align-middle">
+          <table id="nutrition-kbzhu-table" class="table my-4 table-striped align-middle">
             <caption class="py-2 text-center text-md-start">
               Ориентировочное суточное соотношение нутриентов по целям
             </caption>
@@ -150,52 +156,68 @@
       </section>
 
       <!-- Секция 2: Добавки и баннер -->
-      <section class="mb-4 p-4 rounded bg-white">
+      <section id="supplements-section" class="mb-4 p-4 rounded bg-white">
         <h2>Популярные спортивные добавки</h2>
         <p>
           Качественные добавки помогают быстрее закрывать потребность организма в микро и макронутриентах:
         </p>
 
+        <!-- Карточки добавок с кнопками заказа/подбора -->
         <div class="row g-3 my-2">
           <div class="col-12 col-md-4">
-            <div class="zone-item p-3 rounded h-100 border bg-light text-center">
-              <img
-                src="images/creatine-monohydrate.jpg"
-                alt="Креатин моногидрат"
-                class="img-fluid rounded mb-2 zone-img"
-              />
-              <h3 class="h5 fw-bold">Креатин моногидрат</h3>
-              <p class="small text-muted mb-0">
-                Способствует росту силовых показателей, увеличению запасов АТФ и гидратации мышечных клеток.
-              </p>
+            <div class="zone-item p-3 rounded h-100 border bg-light text-center d-flex flex-column justify-content-between">
+              <div>
+                <img
+                  src="images/creatine-monohydrate.jpg"
+                  alt="Креатин моногидрат"
+                  class="img-fluid rounded mb-2 zone-img"
+                />
+                <h3 class="h5 fw-bold">Креатин моногидрат</h3>
+                <p class="small text-muted mb-3">
+                  Способствует росту силовых показателей, увеличению запасов АТФ и гидратации мышечных клеток.
+                </p>
+              </div>
+              <a href="#nutrition-consult-section" class="btn btn-outline-dark btn-sm fw-bold w-100">
+                Заказать / Консультация &darr;
+              </a>
             </div>
           </div>
 
           <div class="col-12 col-md-4">
-            <div class="zone-item p-3 rounded h-100 border bg-light text-center">
-              <img
-                src="images/protein.jpeg"
-                alt="Сывороточный протеин"
-                class="img-fluid rounded mb-2 zone-img"
-              />
-              <h3 class="h5 fw-bold">Сывороточный протеин</h3>
-              <p class="small text-muted mb-0">
-                Удобный и быстрый источник качественного белка для закрытия белкового окна после нагрузок.
-              </p>
+            <div class="zone-item p-3 rounded h-100 border bg-light text-center d-flex flex-column justify-content-between">
+              <div>
+                <img
+                  src="images/protein.jpeg"
+                  alt="Сывороточный протеин"
+                  class="img-fluid rounded mb-2 zone-img"
+                />
+                <h3 class="h5 fw-bold">Сывороточный протеин</h3>
+                <p class="small text-muted mb-3">
+                  Удобный и быстрый источник качественного белка для закрытия белкового окна после нагрузок.
+                </p>
+              </div>
+              <a href="#nutrition-consult-section" class="btn btn-outline-dark btn-sm fw-bold w-100">
+                Заказать / Консультация &darr;
+              </a>
             </div>
           </div>
 
           <div class="col-12 col-md-4">
-            <div class="zone-item p-3 rounded h-100 border bg-light text-center">
-              <img
-                src="images/d3.jpg"
-                alt="Витамины и Омега-3"
-                class="img-fluid rounded mb-2 zone-img"
-              />
-              <h3 class="h5 fw-bold">Витамины и Омега-3</h3>
-              <p class="small text-muted mb-0">
-                Поддерживают здоровье сердечно-сосудистой системы, суставов и общий гормональный фон.
-              </p>
+            <div class="zone-item p-3 rounded h-100 border bg-light text-center d-flex flex-column justify-content-between">
+              <div>
+                <img
+                  src="images/d3.jpg"
+                  alt="Витамины и Омега-3"
+                  class="img-fluid rounded mb-2 zone-img"
+                />
+                <h3 class="h5 fw-bold">Витамины и Омега-3</h3>
+                <p class="small text-muted mb-3">
+                  Поддерживают здоровье сердечно-сосудистой системы, суставов и общий гормональный фон.
+                </p>
+              </div>
+              <a href="#nutrition-consult-section" class="btn btn-outline-dark btn-sm fw-bold w-100">
+                Заказать / Консультация &darr;
+              </a>
             </div>
           </div>
         </div>
@@ -213,56 +235,83 @@
         </div>
       </section>
 
-      <!-- Секция 3: Форма нутрициолога -->
-      <section class="mb-4 p-4 rounded bg-light border">
-        <h2>Задать вопрос нашему нутрициологу</h2>
+      <!-- Секция 3: Форма заказа спорпита и вопросов нутрициологу -->
+      <section id="nutrition-consult-section" class="mb-4 p-4 rounded bg-light border">
+        <h2>Заказать подбор питания или задать вопрос</h2>
         <p>
-          Если вы не знаете, как составить личный КБЖУ-план, отправьте заявку на консультацию:
+          Укажите интересующую добавку или опишите цель. Наш нутрициолог свяжется с вами и подберёт рацион:
         </p>
 
-        <form action="#" method="POST" class="p-3 rounded border bg-light">
-          <div class="mb-3">
-            <label for="nutri-name" class="form-label fw-bold">Имя:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="nutri-name"
-              name="nutri_name"
-              placeholder="Ваше имя"
-              required
-            />
-          </div>
+        <form id="nutrition-question-form" action="#" method="POST" class="p-3 rounded border bg-light">
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <label for="nutri-name" class="form-label fw-bold">Ваше имя:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nutri-name"
+                name="nutri_name"
+                placeholder="Ваше имя"
+                required
+              />
+            </div>
 
-          <div class="mb-3">
-            <label for="phone" class="form-label fw-bold">Номер телефона:</label>
-            <input
-              type="tel"
-              class="form-control"
-              id="phone"
-              name="phone"
-              placeholder="+7 (777) 000-00-00"
-              required
-            />
-          </div>
+            <div class="col-12 col-md-6">
+              <label for="nutri-phone" class="form-label fw-bold">Номер телефона:</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="nutri-phone"
+                name="nutri_phone"
+                placeholder="+7 (777) 000-00-00"
+                required
+              />
+            </div>
 
-          <div class="mb-3">
-            <label for="nutri-question" class="form-label fw-bold">Ваш вопрос по рациону:</label>
-            <textarea
-              class="form-control"
-              id="nutri-question"
-              name="nutri_question"
-              rows="4"
-              placeholder="Например: сколько грамм белка мне нужно при весе 75 кг?"
-              required
-            ></textarea>
-          </div>
+            <!-- Селект интересующей добавки/услуги -->
+            <div class="col-12">
+              <label for="nutri-product-select" class="form-label fw-bold">Интересующая добавка / услуга:</label>
+              <select class="form-select" id="nutri-product-select" name="nutri_product">
+                <option value="general" selected>Индивидуальный подбор рациона (Консультация)</option>
+                <option value="creatine">Креатин моногидрат</option>
+                <option value="protein">Сывороточный протеин</option>
+                <option value="vitamins">Витаминно-минеральный комплекс / Омега-3</option>
+              </select>
+            </div>
 
-          <button type="submit" class="btn btn-dark fw-bold px-4">
-            Задать вопрос
-          </button>
+            <div class="col-12">
+              <label for="nutri-question" class="form-label fw-bold">Ваш вопрос или пожелания к заказу:</label>
+              <textarea
+                class="form-control"
+                id="nutri-question"
+                name="nutri_question"
+                rows="3"
+                placeholder="Например: хочу заказать протеин для набора массы при весе 75 кг..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="col-12">
+              <button id="nutri-submit-btn" type="submit" class="btn btn-dark fw-bold px-4">
+                Отправить заявку
+              </button>
+            </div>
+          </div>
         </form>
+
+        <!-- Контейнер для JS-ответа после отправки -->
+        <div id="nutri-form-status" class="status-message mt-3" aria-live="polite"></div>
       </section>
     </main>
+
+    <!-- Плавающие элементы удобства (UX/UI) -->
+    <a href="booking.html" class="btn btn-primary fw-bold rounded-pill quick-booking-btn px-3">
+      ⚡ Быстрая запись
+    </a>
+
+    <a href="#top" class="btn btn-dark text-warning border-warning rounded-circle back-to-top-btn" aria-label="Вернуться наверх">
+      ↑
+    </a>
 
     <!-- Подвал страницы -->
     <footer class="py-4 text-center text-white bg-dark">
