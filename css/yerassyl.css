@@ -31,3 +31,11 @@
   border-color: var(--color-accent);
   box-shadow: 0 0 0 0.25rem rgba(255, 107, 26, 0.25);
 }
+
+/* Оранжевая рамка для активного пункта меню (дизайн Bonanza Gym) */
+.navbar .nav-link.active,
+.navbar .nav-link[aria-current="page"] {
+  border: 2px solid var(--color-accent);
+  border-radius: 6px;
+  color: var(--color-white) !important;
+}
