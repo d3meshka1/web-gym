@@ -1,30 +1,23 @@
 /* ============================================================
    yerrasyl.css — личный файл Yerrasyl Sagimgaliyev
-   Assignment 3: Bootstrap 5.3 Overrides
+   Assignment 3: Bootstrap 5.3 Overrides & Specific Styles
    Страницы: booking.html, nutrition.html, about.html
    ============================================================ */
 
-/* Цвет выделения текста на сайте */
+/* Выделение текста через единую переменную из base.css */
 *::selection {
-  background-color: #ff6b1a;
-  color: #14181f;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
 }
 
-/* Ограничение размеров логотипа в шапке */
-.header-logo {
-  max-height: 50px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* Ограничение высоты картинок добавок и товаров */
+/* Ограничение высоты картинок добавок и карточек */
 .zone-img,
 .card-img-custom {
   max-height: 150px;
   object-fit: contain;
 }
 
-/* Фиксированная плавающая кнопка в углу экрана */
+/* Плавающая кнопка бронирования (при наличии) */
 .quick-booking-btn {
   position: fixed;
   right: 1.5rem;
@@ -32,9 +25,9 @@
   z-index: 1000;
 }
 
-/* Оранжевый фокус для полей ввода формы под брендбук */
+/* Мягкое свечение полей формы при фокусе в цвет бренда */
 .form-control:focus,
 .form-select:focus {
-  border-color: #ff6b1a;
+  border-color: var(--color-accent);
   box-shadow: 0 0 0 0.25rem rgba(255, 107, 26, 0.25);
 }
