@@ -20,7 +20,7 @@
     <title>Записаться на тренировку — Bonanza Gym</title>
   </head>
   <body>
-    <!-- Фирменная командная шапка -->
+    <!-- Шапка сайта -->
     <header id="top" class="py-3 text-center">
       <div
         class="header-brand d-flex align-items-center justify-content-center gap-3 mb-3"
@@ -83,85 +83,85 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть уведомление"></button>
       </div>
 
-      <!-- Секция 1: Инструкция перед визитом -->
-      <section id="booking-info-section" class="mb-4 p-4 rounded bg-white border">
-        <h2>Как записаться на тренировку в Bonanza Gym</h2>
-        <p class="page-intro">
+      <!-- Секция 1: Информация перед визитом -->
+      <section id="booking-info-section" class="mb-4 p-4 rounded-3 bg-white border shadow-sm">
+        <h2 class="mb-3">Как записаться на тренировку в Bonanza Gym</h2>
+        <p class="page-intro text-muted">
           Вы можете забронировать первое ознакомительное занятие, персональную
           тренировку с наставником или визит в тренажерный зал через форму ниже.
-          После отправки заявки наш администратор свяжется с вами по указанному
-          телефону для подтверждения времени.
+          После отправки заявки наш администратор свяжется с вами для подтверждения времени.
         </p>
 
         <h3 class="h5 fw-bold mt-4 mb-3">Что важно знать перед визитом:</h3>
         <div class="row g-3">
           <div class="col-12 col-md-4">
-            <div class="p-3 rounded border bg-light h-100">
-              <strong>1. Документы:</strong> При себе необходимо иметь удостоверение личности (для оформления гостевого пропуска).
+            <div class="p-3 rounded-3 border bg-light h-100">
+              <strong class="d-block mb-1 text-dark">1. Документы:</strong>
+              <span class="small text-muted">При себе необходимо иметь удостоверение личности для пропуска.</span>
             </div>
           </div>
           <div class="col-12 col-md-4">
-            <div class="p-3 rounded border bg-light h-100">
-              <strong>2. Экипировка:</strong> Возьмите с собой сменную спортивную обувь и удобную форму.
+            <div class="p-3 rounded-3 border bg-light h-100">
+              <strong class="d-block mb-1 text-dark">2. Экипировка:</strong>
+              <span class="small text-muted">Возьмите с собой сменную спортивную обувь и удобную форму.</span>
             </div>
           </div>
           <div class="col-12 col-md-4">
-            <div class="p-3 rounded border bg-light h-100">
-              <strong>3. Удобства:</strong> Полотенце и питьевую воду можно принести с собой или взять на рецепции клуба.
+            <div class="p-3 rounded-3 border bg-light h-100">
+              <strong class="d-block mb-1 text-dark">3. Удобства:</strong>
+              <span class="small text-muted">Полотенце и питьевую воду можно получить на рецепции клуба.</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Секция 2: Ведущие тренеры клуба с графиком и остатком мест -->
-      <section id="trainers-section" class="mb-4 p-4 rounded bg-white border">
+      <!-- Секция 2: Тренеры клуба -->
+      <section id="trainers-section" class="mb-4 p-4 rounded-3 bg-white border shadow-sm">
         <h2 class="mb-2">Расписание ведущих тренеров</h2>
         <p class="text-muted mb-4">
-          Ознакомьтесь с графиком работы экспертов и выберите удобные дни для персональных занятий:
+          Выберите наставника и удобные дни для тренировок (количество мест ограничено):
         </p>
 
         <div class="row g-3 justify-content-center">
-          <!-- Тренер 1: Соколовский Андрей -->
+          <!-- Соколовский Андрей -->
           <div class="col-12 col-md-6">
-            <div class="zone-item p-3 rounded h-100 border bg-light text-center d-flex flex-column justify-content-between">
+            <div class="card-custom p-4 rounded-3 bg-light text-center h-100 d-flex flex-column justify-content-between">
               <div>
-                <div class="d-flex justify-content-center gap-2 mb-2">
-                  <span class="badge bg-warning text-dark">Силовой тренинг</span>
-                  <span class="badge bg-danger">Осталось 2 места!</span>
+                <div class="d-flex justify-content-center gap-2 mb-2 flex-wrap">
+                  <span class="badge bg-warning text-dark px-3 py-2">Силовой тренинг & Набор массы</span>
+                  <span class="badge bg-danger px-3 py-2">Осталось 2 места</span>
                 </div>
-                <h3 class="h5 fw-bold mb-1">Соколовский Андрей</h3>
-                <p class="small text-dark mb-1">
-                  <strong>График работы:</strong> Пн, Ср, Пт — с 09:00 до 21:00
-                </p>
+                <h3 class="h4 fw-bold mt-2 mb-1">Соколовский Андрей</h3>
+                <div class="p-2 bg-white rounded border my-2 small text-dark fw-medium">
+                  🗓 <strong>График:</strong> Пн, Ср, Пт — с 09:00 до 21:00
+                </div>
                 <p class="small text-muted mb-3">
-                  Мастер спорта по пауэрлифтингу, стаж 10 лет.<br />
-                  Специализация: силовой тренинг, набор мышечной массы.
+                  Мастер спорта по пауэрлифтингу, стаж тренировок 10 лет. Поможет нарастить мышечную массу и выставить правильную технику базовых упражнений.
                 </p>
               </div>
-              <a href="#booking-form-section" class="btn btn-outline-dark btn-sm fw-bold w-100">
+              <a href="#booking-form-section" class="btn btn-dark fw-bold w-100 py-2">
                 Записаться к Андрею &darr;
               </a>
             </div>
           </div>
 
-          <!-- Тренер 2: Мосоян Злата -->
+          <!-- Мосоян Злата -->
           <div class="col-12 col-md-6">
-            <div class="zone-item p-3 rounded h-100 border bg-light text-center d-flex flex-column justify-content-between">
+            <div class="card-custom p-4 rounded-3 bg-light text-center h-100 d-flex flex-column justify-content-between">
               <div>
-                <div class="d-flex justify-content-center gap-2 mb-2">
-                  <span class="badge bg-dark text-white">Похудение & Нутрициология</span>
-                  <span class="badge bg-success">Свободно 4 места</span>
+                <div class="d-flex justify-content-center gap-2 mb-2 flex-wrap">
+                  <span class="badge bg-dark text-white px-3 py-2">Похудение & Нутрициология</span>
+                  <span class="badge bg-success px-3 py-2">Свободно 4 места</span>
                 </div>
-                <h3 class="h5 fw-bold mb-1">Мосоян Злата</h3>
-                <p class="small text-dark mb-1">
-                  <strong>График работы:</strong> Вт, Чт, Сб — с 10:00 до 20:00
-                </p>
+                <h3 class="h4 fw-bold mt-2 mb-1">Мосоян Злата</h3>
+                <div class="p-2 bg-white rounded border my-2 small text-dark fw-medium">
+                  🗓 <strong>График:</strong> Вт, Чт, Сб — с 10:00 до 20:00
+                </div>
                 <p class="small text-muted mb-3">
-                  Сертифицированный нутрициолог и тренер.<br />
-                  Специализация: безопасное похудение, рельеф, составление планов питания.
+                  Сертифицированный нутрициолог и тренер. Специалист по безопасному снижению веса, рельефу и индивидуальному планированию рациона.
                 </p>
               </div>
-              <a href="#booking-form-section" class="btn btn-outline-dark btn-sm fw-bold w-100">
+              <a href="#booking-form-section" class="btn btn-dark fw-bold w-100 py-2">
                 Записаться к Злате &darr;
               </a>
             </div>
@@ -170,13 +170,13 @@
       </section>
 
       <!-- Секция 3: Форма записи -->
-      <section id="booking-form-section" class="mb-4 p-4 rounded bg-white border">
-        <h2>Заполните форму для резервирования времени</h2>
-        <p class="mb-4">
-          Укажите ваши контактные данные, выберите тренера и удобные день и время:
+      <section id="booking-form-section" class="mb-4 p-4 rounded-3 bg-white border shadow-sm">
+        <h2 class="mb-2">Заполните форму для резервирования времени</h2>
+        <p class="text-muted mb-4">
+          Укажите ваши контактные данные, формат и удобное время посещения:
         </p>
 
-        <form id="booking-form" action="#" method="POST" class="p-4 rounded border bg-light">
+        <form id="booking-form" action="#" method="POST" class="p-4 rounded-3 border bg-light">
           <fieldset>
             <legend class="h5 fw-bold mb-4 text-dark border-bottom pb-2">
               Персональная информация и параметры записи
@@ -261,22 +261,10 @@
                 />
               </div>
 
-              <!-- Радиокнопки формата -->
+              <!-- Формат -->
               <div class="col-12">
                 <label class="form-label fw-bold d-block">Формат посещения:</label>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    id="visit-solo"
-                    name="visit_format"
-                    value="solo"
-                  />
-                  <label class="form-check-label" for="visit-solo">
-                    Самостоятельная тренировка
-                  </label>
-                </div>
-                <div class="form-check form-check-inline">
+                <div class="form-check form-check-inline me-4">
                   <input
                     class="form-check-input"
                     type="radio"
@@ -285,15 +273,27 @@
                     value="trainer"
                     checked
                   />
-                  <label class="form-check-label" for="visit-trainer">
+                  <label class="form-check-label fw-medium" for="visit-trainer">
                     Персональная тренировка с тренером
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="visit-solo"
+                    name="visit_format"
+                    value="solo"
+                  />
+                  <label class="form-check-label fw-medium" for="visit-solo">
+                    Самостоятельная тренировка
                   </label>
                 </div>
               </div>
 
-              <!-- Выбор персонального тренера с графиком -->
-              <div class="col-12 col-md-6">
-                <label for="trainer-select" class="form-label fw-bold">Персональный тренер и график:</label>
+              <!-- Динамический выбор тренера (скрывается на CSS при самостоятельной тренировке) -->
+              <div class="col-12 col-md-6 trainer-select-container">
+                <label for="trainer-select" class="form-label fw-bold">Выбор персонального тренера:</label>
                 <select
                   class="form-select"
                   id="trainer-select"
@@ -305,20 +305,18 @@
                 </select>
               </div>
 
-              <!-- Выбор абонемента / услуги -->
+              <!-- Выбор абонемента -->
               <div class="col-12 col-md-6">
-                <label for="membership-type" class="form-label fw-bold">Выберите направление:</label>
+                <label for="membership-type" class="form-label fw-bold">Выберите направление / тариф:</label>
                 <select
                   class="form-select"
                   id="membership-type"
                   name="membership_type"
                   required
                 >
-                  <option value="" disabled selected>
-                    -- Выберите услугу --
-                  </option>
-                  <option value="gym_day">Разовое занятие с тренером</option>
-                  <option value="gym_evening">Вечерний зал Стандарт</option>
+                  <option value="" disabled selected>-- Выберите тариф --</option>
+                  <option value="gym_day">Разовое занятие с тренером (2 000 ₸)</option>
+                  <option value="gym_evening">Дневной/Вечерний зал Стандарт</option>
                   <option value="student">Студенческий абонемент</option>
                   <option value="quarter">Безлимит на 3 месяца</option>
                   <option value="personal">Пакет из 12 персональных тренировок</option>
@@ -332,8 +330,8 @@
                   class="form-control"
                   id="comments"
                   name="comments"
-                  rows="4"
-                  placeholder="Укажите цель тренировки (набор массы, похудение), наличие прошлых травм..."
+                  rows="3"
+                  placeholder="Укажите цель тренировки (набор массы, похудение), наличие травм..."
                 ></textarea>
               </div>
 
@@ -355,10 +353,10 @@
 
               <!-- Кнопки -->
               <div class="col-12 pt-2">
-                <button id="booking-submit-btn" type="submit" class="btn btn-dark fw-bold me-2 px-4">
+                <button id="booking-submit-btn" type="submit" class="btn btn-dark fw-bold me-2 px-4 py-2">
                   Отправить заявку
                 </button>
-                <button id="booking-reset-btn" type="reset" class="btn btn-outline-secondary px-4">
+                <button id="booking-reset-btn" type="reset" class="btn btn-outline-secondary px-4 py-2">
                   Очистить форму
                 </button>
               </div>
@@ -374,7 +372,6 @@
       ↑
     </a>
 
-    <!-- Подвал страницы -->
     <footer class="py-4 text-center text-white bg-dark">
       <div class="container">
         <p class="m-0">&copy; 2026 Bonanza Gym. Все права защищены.</p>
