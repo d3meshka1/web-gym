@@ -113,11 +113,11 @@
         </div>
       </section>
 
-      <!-- Секция 2: Ведущие тренеры клуба -->
+      <!-- Секция 2: Ведущие тренеры клуба с количеством оставшихся мест -->
       <section id="trainers-section" class="mb-4 p-4 rounded bg-white border">
         <h2 class="mb-2">Наши ведущие тренеры</h2>
         <p class="text-muted mb-4">
-          Качественный результат зависит от наставника. Познакомьтесь с нашими ключевыми экспертами:
+          Качественный результат зависит от наставника. Количество мест на персональное сопровождение ограничено:
         </p>
 
         <div class="row g-3 justify-content-center">
@@ -125,8 +125,11 @@
           <div class="col-12 col-md-6">
             <div class="zone-item p-3 rounded h-100 border bg-light text-center d-flex flex-column justify-content-between">
               <div>
+                <div class="d-flex justify-content-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark">Силовой тренинг & Набор массы</span>
+                  <span class="badge bg-danger">Осталось 2 места!</span>
+                </div>
                 <h3 class="h5 fw-bold mb-1">Соколовский Андрей</h3>
-                <span class="badge bg-warning text-dark mb-2">Силовой тренинг & Набор массы</span>
                 <p class="small text-muted mb-3">
                   Мастер спорта по пауэрлифтингу, стаж тренировок 10 лет.<br />
                   <strong>Специализация:</strong> силовой тренинг, набор мышечной массы.
@@ -142,8 +145,11 @@
           <div class="col-12 col-md-6">
             <div class="zone-item p-3 rounded h-100 border bg-light text-center d-flex flex-column justify-content-between">
               <div>
+                <div class="d-flex justify-content-center gap-2 mb-2">
+                  <span class="badge bg-dark text-white">Похудение & Нутрициология</span>
+                  <span class="badge bg-success">Свободно 4 места</span>
+                </div>
                 <h3 class="h5 fw-bold mb-1">Мосоян Злата</h3>
-                <span class="badge bg-dark text-white mb-2">Похудение & Нутрициология</span>
                 <p class="small text-muted mb-3">
                   Сертифицированный нутрициолог и тренер групповых программ.<br />
                   <strong>Специализация:</strong> безопасное похудение, рельеф, составление планов питания.
@@ -279,7 +285,7 @@
                 </div>
               </div>
 
-              <!-- Выбор персонального тренера -->
+              <!-- Выбор персонального тренера и оставшихся мест -->
               <div class="col-12 col-md-6">
                 <label for="trainer-select" class="form-label fw-bold">Персональный тренер:</label>
                 <select
@@ -288,8 +294,8 @@
                   name="trainer_select"
                 >
                   <option value="any" selected>-- Любой свободный тренер --</option>
-                  <option value="sokolovsky">Соколовский Андрей (Силовой тренинг / Набор массы)</option>
-                  <option value="mosoyan">Мосоян Злата (Похудение / Рельеф / Нутрициология)</option>
+                  <option value="sokolovsky">Соколовский Андрей — Осталось 2 места (Силовой тренинг)</option>
+                  <option value="mosoyan">Мосоян Злата — Свободно 4 места (Похудение & Нутрициология)</option>
                 </select>
               </div>
 
@@ -369,6 +375,7 @@
       </div>
     </footer>
 
+    <!-- Bootstrap 5.3 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
