@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Рекомендации по спортивному питанию, расчету калорий и набору массы в Bonanza Gym."
+      content="Рекомендации по спортивному питанию, расчету калорий, ценам на добавки и набору массы в Bonanza Gym."
     />
     <meta name="author" content="Yerrasyl Sagimgaliyev" />
 
@@ -68,7 +68,7 @@
                 <a href="nutrition.html" class="nav-link rounded-1 px-3 active" aria-current="page">Питание</a>
               </li>
               <li class="nav-item">
-                <a href="colophon.html" class="nav-link rounded-1 px-3">О нас</a>
+                <a href="about.html" class="nav-link rounded-1 px-3">О нас</a>
               </li>
             </ul>
           </div>
@@ -79,15 +79,15 @@
     <!-- Главное содержимое страницы -->
     <main class="container mx-auto my-4">
       
-      <!-- Интерактивная баннер-акция -->
+      <!-- Баннер-уведомление -->
       <div id="nutrition-promo-alert" class="alert alert-warning alert-dismissible fade show border-0 shadow-sm mb-4 fw-medium" role="alert">
-        ⚡ <strong>Спецпредложение:</strong> Получите бесплатную персональную консультацию нутрициолога при записи на первую тренировку!
-        <a href="booking.html" class="alert-link text-decoration-underline ms-2">Записаться сейчас &rarr;</a>
+        ⚡ <strong>Спецпредложение:</strong> Получите бесплатную персональную консультацию нутрициолога при покупке любой добавки в фитнес-баре!
+        <a href="booking.html" class="alert-link text-decoration-underline ms-2">Записаться на визит &rarr;</a>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть уведомление"></button>
       </div>
 
       <!-- Секция 1: Рацион и Таблица КБЖУ -->
-      <section id="nutrition-basics-section" class="mb-4 p-4 rounded bg-white">
+      <section id="nutrition-basics-section" class="mb-4 p-4 rounded bg-white border">
         <h2 class="text-center text-md-start">Основы правильного рациона при тренировках</h2>
         <p class="page-intro">
           Для достижения заметных результатов в тренажерном зале важна не только
@@ -155,15 +155,15 @@
         </div>
       </section>
 
-      <!-- Секция 2: Добавки и баннер -->
-      <section id="supplements-section" class="mb-4 p-4 rounded bg-white">
-        <h2>Популярные спортивные добавки</h2>
+      <!-- Секция 2: Добавки с ценами и баннер -->
+      <section id="supplements-section" class="mb-4 p-4 rounded bg-white border">
+        <h2>Популярные спортивные добавки и цены</h2>
         <p>
-          Качественные добавки помогают быстрее закрывать потребность организма в микро и макронутриентах:
+          Качественные препараты фитнес-бара Bonanza Gym помогают быстрее закрывать потребность организма в питательных веществах:
         </p>
 
-        <!-- Карточки добавок с кнопками заказа/подбора -->
         <div class="row g-3 my-2">
+          <!-- Карточка 1 -->
           <div class="col-12 col-md-4">
             <div class="zone-item p-3 rounded h-100 border bg-light text-center d-flex flex-column justify-content-between">
               <div>
@@ -172,17 +172,19 @@
                   alt="Креатин моногидрат"
                   class="img-fluid rounded mb-2 zone-img"
                 />
-                <h3 class="h5 fw-bold">Креатин моногидрат</h3>
+                <h3 class="h5 fw-bold mb-1">Креатин моногидрат</h3>
+                <div class="fs-5 fw-bold text-warning mb-2">8 500 ₸ <small class="fs-6 text-muted fw-normal">/ 300 г</small></div>
                 <p class="small text-muted mb-3">
                   Способствует росту силовых показателей, увеличению запасов АТФ и гидратации мышечных клеток.
                 </p>
               </div>
               <a href="#nutrition-consult-section" class="btn btn-outline-dark btn-sm fw-bold w-100">
-                Заказать / Консультация &darr;
+                Заказать за 8 500 ₸ &darr;
               </a>
             </div>
           </div>
 
+          <!-- Карточка 2 -->
           <div class="col-12 col-md-4">
             <div class="zone-item p-3 rounded h-100 border bg-light text-center d-flex flex-column justify-content-between">
               <div>
@@ -191,17 +193,19 @@
                   alt="Сывороточный протеин"
                   class="img-fluid rounded mb-2 zone-img"
                 />
-                <h3 class="h5 fw-bold">Сывороточный протеин</h3>
+                <h3 class="h5 fw-bold mb-1">Сывороточный протеин</h3>
+                <div class="fs-5 fw-bold text-warning mb-2">14 500 ₸ <small class="fs-6 text-muted fw-normal">/ 900 г</small></div>
                 <p class="small text-muted mb-3">
                   Удобный и быстрый источник качественного белка для закрытия белкового окна после нагрузок.
                 </p>
               </div>
               <a href="#nutrition-consult-section" class="btn btn-outline-dark btn-sm fw-bold w-100">
-                Заказать / Консультация &darr;
+                Заказать за 14 500 ₸ &darr;
               </a>
             </div>
           </div>
 
+          <!-- Карточка 3 -->
           <div class="col-12 col-md-4">
             <div class="zone-item p-3 rounded h-100 border bg-light text-center d-flex flex-column justify-content-between">
               <div>
@@ -210,13 +214,14 @@
                   alt="Витамины и Омега-3"
                   class="img-fluid rounded mb-2 zone-img"
                 />
-                <h3 class="h5 fw-bold">Витамины и Омега-3</h3>
+                <h3 class="h5 fw-bold mb-1">Витамины & Омега-3</h3>
+                <div class="fs-5 fw-bold text-warning mb-2">6 900 ₸ <small class="fs-6 text-muted fw-normal">/ курс</small></div>
                 <p class="small text-muted mb-3">
                   Поддерживают здоровье сердечно-сосудистой системы, суставов и общий гормональный фон.
                 </p>
               </div>
               <a href="#nutrition-consult-section" class="btn btn-outline-dark btn-sm fw-bold w-100">
-                Заказать / Консультация &darr;
+                Заказать за 6 900 ₸ &darr;
               </a>
             </div>
           </div>
@@ -235,11 +240,11 @@
         </div>
       </section>
 
-      <!-- Секция 3: Форма заказа спорпита и вопросов нутрициологу -->
-      <section id="nutrition-consult-section" class="mb-4 p-4 rounded bg-light border">
-        <h2>Заказать подбор питания или задать вопрос</h2>
+      <!-- Секция 3: Форма заказа спорпита и консультации -->
+      <section id="nutrition-consult-section" class="mb-4 p-4 rounded bg-white border">
+        <h2>Заказать спортивное питание или консультацию</h2>
         <p>
-          Укажите интересующую добавку или опишите цель. Наш нутрициолог свяжется с вами и подберёт рацион:
+          Выберите нужный препарат или опишите цель. Администратор фитнес-бара свяжется с вами для оформления брони:
         </p>
 
         <form id="nutrition-question-form" action="#" method="POST" class="p-3 rounded border bg-light">
@@ -268,14 +273,13 @@
               />
             </div>
 
-            <!-- Селект интересующей добавки/услуги -->
             <div class="col-12">
-              <label for="nutri-product-select" class="form-label fw-bold">Интересующая добавка / услуга:</label>
+              <label for="nutri-product-select" class="form-label fw-bold">Выберите препарат / услугу:</label>
               <select class="form-select" id="nutri-product-select" name="nutri_product">
-                <option value="general" selected>Индивидуальный подбор рациона (Консультация)</option>
-                <option value="creatine">Креатин моногидрат</option>
-                <option value="protein">Сывороточный протеин</option>
-                <option value="vitamins">Витаминно-минеральный комплекс / Омега-3</option>
+                <option value="general" selected>Индивидуальная консультация нутрициолога (Бесплатно)</option>
+                <option value="creatine">Креатин моногидрат (300 г) — 8 500 ₸</option>
+                <option value="protein">Сывороточный протеин (900 г) — 14 500 ₸</option>
+                <option value="vitamins">Комплекс Витамины & Омега-3 — 6 900 ₸</option>
               </select>
             </div>
 
@@ -286,7 +290,7 @@
                 id="nutri-question"
                 name="nutri_question"
                 rows="3"
-                placeholder="Например: хочу заказать протеин для набора массы при весе 75 кг..."
+                placeholder="Укажите вкус (шоколад/банан), объём или вопрос по приёму..."
                 required
               ></textarea>
             </div>
@@ -299,12 +303,11 @@
           </div>
         </form>
 
-        <!-- Контейнер для JS-ответа после отправки -->
         <div id="nutri-form-status" class="status-message mt-3" aria-live="polite"></div>
       </section>
     </main>
 
-    <!-- Плавающие элементы удобства (UX/UI) -->
+    <!-- Плавающие элементы навигации -->
     <a href="booking.html" class="btn btn-primary fw-bold rounded-pill quick-booking-btn px-3">
       ⚡ Быстрая запись
     </a>
