@@ -1,41 +1,82 @@
 /* ============================================================
-   yerrasyl.css — личный файл Yerrasyl Sagimgaliyev
-   Assignment 3: Bootstrap 5.3 Overrides & Specific Styles
-   Страницы: booking.html, nutrition.html, about.html
+   yerrasyl.css — Bonanza Gym (Yerrasyl Sagimgaliyev)
+   Дизайн и специфичные стили
    ============================================================ */
 
-/* Выделение текста через единую переменную из base.css */
+/* Выделение текста под стиль бренда */
 *::selection {
   background-color: var(--color-accent);
   color: var(--color-dark);
 }
 
-/* Ограничение высоты картинок добавок и карточек */
+/* Интерактивные карточки тренеров и товаров с микро-анимацией */
+.card-custom {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+.card-custom:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Картинки в карточках */
 .zone-img,
 .card-img-custom {
   max-height: 150px;
   object-fit: contain;
 }
 
-/* Плавающая кнопка бронирования (при наличии) */
+/* Плавающая кнопка быстрой записи (слева внизу) */
 .quick-booking-btn {
+  position: fixed;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.quick-booking-btn:hover {
+  transform: scale(1.03);
+}
+
+/* Плавающая кнопка «Наверх» (справа внизу) */
+.back-to-top-btn {
   position: fixed;
   right: 1.5rem;
   bottom: 1.5rem;
   z-index: 1000;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
 }
 
-/* Мягкое свечение полей формы при фокусе в цвет бренда */
+.back-to-top-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Мягкий оранжевый фокус для форм */
 .form-control:focus,
 .form-select:focus {
   border-color: var(--color-accent);
   box-shadow: 0 0 0 0.25rem rgba(255, 107, 26, 0.25);
 }
 
-/* Оранжевая рамка для активного пункта меню (дизайн Bonanza Gym) */
+/* Рамка активного пункта меню */
 .navbar .nav-link.active,
 .navbar .nav-link[aria-current="page"] {
   border: 2px solid var(--color-accent);
   border-radius: 6px;
   color: var(--color-white) !important;
+}
+
+/* Умное скрытие выпадающего списка тренеров на чистом CSS */
+#booking-form:has(#visit-solo:checked) .trainer-select-container {
+  display: none !important;
 }
