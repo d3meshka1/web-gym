@@ -20,7 +20,7 @@
     <title>Питание и режим — Bonanza Gym</title>
   </head>
   <body>
-    <!-- Фирменная шапка Bonanza Gym -->
+    <!-- Шапка сайта -->
     <header id="top" class="py-3 text-center">
       <div
         class="header-brand d-flex align-items-center justify-content-center gap-3 mb-3"
@@ -76,20 +76,19 @@
       </nav>
     </header>
     
-    <!-- Главное содержимое страницы -->
     <main class="container mx-auto my-4">
       
       <!-- Баннер-уведомление -->
       <div id="nutrition-promo-alert" class="alert alert-warning alert-dismissible fade show border-0 shadow-sm mb-4 fw-medium" role="alert">
-        ⚡ <strong>Спецпредложение:</strong> Получите бесплатную персональную консультацию нутрициолога при покупке любой добавки в фитнес-баре!
+        ⚡ <strong>Спецпредложение:</strong> Бесплатная консультация нутрициолога при покупке любой добавки в фитнес-баре!
         <a href="booking.html" class="alert-link text-decoration-underline ms-2">Записаться на визит &rarr;</a>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть уведомление"></button>
       </div>
 
       <!-- Секция 1: Рацион и Таблица КБЖУ -->
-      <section id="nutrition-basics-section" class="mb-4 p-4 rounded bg-white border">
-        <h2 class="text-center text-md-start">Основы правильного рациона при тренировках</h2>
-        <p class="page-intro">
+      <section id="nutrition-basics-section" class="mb-4 p-4 rounded-3 bg-white border shadow-sm">
+        <h2 class="text-center text-md-start mb-3">Основы правильного рациона при тренировках</h2>
+        <p class="page-intro text-muted">
           Для достижения заметных результатов в тренажерном зале важна не только
           интенсивная физическая нагрузка, но и сбалансированное питание. Ниже
           приведены ключевые принципы потребления белков, жиров, углеводов и
@@ -101,7 +100,7 @@
             <caption class="py-2 text-center text-md-start">
               Ориентировочное суточное соотношение нутриентов по целям
             </caption>
-            <thead>
+            <thead class="table-dark">
               <tr>
                 <th scope="col">Цель тренировок</th>
                 <th scope="col">Калорийность</th>
@@ -141,7 +140,7 @@
             />
           </div>
           <div class="col-12 col-md-8">
-            <div class="p-3 rounded border bg-light h-100">
+            <div class="p-3 rounded-3 border bg-light h-100">
               <p class="mb-2">
                 <strong>Профицит калорий и гидратация:</strong> для стабильного роста мышечных
                 волокон потребление энергии должно слегка превышать ваш суточный базовый расход.
@@ -155,72 +154,72 @@
         </div>
       </section>
 
-      <!-- Секция 2: Добавки с ценами и баннер -->
-      <section id="supplements-section" class="mb-4 p-4 rounded bg-white border">
-        <h2>Популярные спортивные добавки и цены</h2>
-        <p>
-          Качественные препараты фитнес-бара Bonanza Gym помогают быстрее закрывать потребность организма в питательных веществах:
+      <!-- Секция 2: Добавки и ценники -->
+      <section id="supplements-section" class="mb-4 p-4 rounded-3 bg-white border shadow-sm">
+        <h2 class="mb-2">Популярные спортивные добавки и цены</h2>
+        <p class="text-muted mb-4">
+          Качественные препараты нашего фитнес-бара помогают быстрее закрывать потребность организма в микро и макронутриентах:
         </p>
 
         <div class="row g-3 my-2">
-          <!-- Карточка 1 -->
+          <!-- Креатин -->
           <div class="col-12 col-md-4">
-            <div class="zone-item p-3 rounded h-100 border bg-light text-center d-flex flex-column justify-content-between">
+            <div class="card-custom p-4 rounded-3 bg-light text-center h-100 d-flex flex-column justify-content-between">
               <div>
                 <img
                   src="images/creatine-monohydrate.jpg"
                   alt="Креатин моногидрат"
-                  class="img-fluid rounded mb-2 zone-img"
+                  class="img-fluid rounded mb-3 zone-img"
                 />
                 <h3 class="h5 fw-bold mb-1">Креатин моногидрат</h3>
-                <div class="fs-5 fw-bold text-warning mb-2">8 500 ₸ <small class="fs-6 text-muted fw-normal">/ 300 г</small></div>
+                <div class="badge bg-warning text-dark fs-6 my-2 px-3 py-2">8 500 ₸ / 300 г</div>
                 <p class="small text-muted mb-3">
                   Способствует росту силовых показателей, увеличению запасов АТФ и гидратации мышечных клеток.
                 </p>
               </div>
-              <a href="#nutrition-consult-section" class="btn btn-outline-dark btn-sm fw-bold w-100">
+              <a href="#nutrition-consult-section" class="btn btn-dark btn-sm fw-bold w-100 py-2">
                 Заказать за 8 500 ₸ &darr;
               </a>
             </div>
           </div>
 
-          <!-- Карточка 2 -->
+          <!-- Протеин -->
           <div class="col-12 col-md-4">
-            <div class="zone-item p-3 rounded h-100 border bg-light text-center d-flex flex-column justify-content-between">
+            <div class="card-custom p-4 rounded-3 bg-light text-center h-100 d-flex flex-column justify-content-between">
               <div>
                 <img
                   src="images/protein.jpeg"
                   alt="Сывороточный протеин"
-                  class="img-fluid rounded mb-2 zone-img"
+                  class="img-fluid rounded mb-3 zone-img"
                 />
                 <h3 class="h5 fw-bold mb-1">Сывороточный протеин</h3>
-                <div class="fs-5 fw-bold text-warning mb-2">14 500 ₸ <small class="fs-6 text-muted fw-normal">/ 900 г</small></div>
+                <div class="badge bg-warning text-dark fs-6 my-2 px-3 py-2">14 500 ₸ / 900 г</div>
                 <p class="small text-muted mb-3">
-                  Удобный и быстрый источник качественного белка для закрытия белкового окна после нагрузок.
+                  Быстрый и удобный источник качественного белка для закрытия анаболического окна после тренировок.
                 </p>
               </div>
-              <a href="#nutrition-consult-section" class="btn btn-outline-dark btn-sm fw-bold w-100">
+              <a href="#nutrition-consult-section" class="btn btn-dark btn-sm fw-bold w-100 py-2">
                 Заказать за 14 500 ₸ &darr;
               </a>
             </div>
           </div>
 
-          <!-- Карточка 3 -->
+          <!-- Омега -->
           <div class="col-12 col-md-4">
-            <div class="zone-item p-3 rounded h-100 border bg-light text-center d-flex flex-column justify-content-between">
+            <div class="card-custom p-4 rounded-3 bg-light text-center h-100 d-flex flex-column justify-content-between">
               <div>
                 <img
                   src="images/d3.jpg"
                   alt="Витамины и Омега-3"
-                  class="img-fluid rounded mb-2 zone-img"
+                  class="img-fluid rounded mb-3 zone-img"
                 />
                 <h3 class="h5 fw-bold mb-1">Витамины & Омега-3</h3>
-                <div class="fs-5 fw-bold text-warning mb-2">6 900 ₸ <small class="fs-6 text-muted fw-normal">/ курс</small></div>
+                <div class="badge bg-warning text-dark fs-6 my-2 px-3 py-2">6 900 ₸ / курс</div>
                 <p class="small text-muted mb-3">
-                  Поддерживают здоровье сердечно-сосудистой системы, суставов и общий гормональный фон.
+                  Поддерживают здоровье сердечно-сосудистой системы, связок, суставов и общий гормональный фон.
                 </p>
               </div>
-              <a href="#nutrition-consult-section" class="btn btn-outline-dark btn-sm fw-bold w-100">
+              <a href="#nutrition-consult-section" class="btn btn-dark btn-sm fw-bold w-100 py-2">
                 Заказать за 6 900 ₸ &darr;
               </a>
             </div>
@@ -229,7 +228,7 @@
 
         <div
           id="promo-banner-wrapper"
-          class="d-flex justify-content-center align-items-center p-3 text-center rounded mt-4 bg-dark text-white"
+          class="d-flex justify-content-center align-items-center p-3 text-center rounded-3 mt-4 bg-dark text-white"
         >
           <blockquote class="m-0 border-0 p-0">
             <p class="m-0">
@@ -240,14 +239,14 @@
         </div>
       </section>
 
-      <!-- Секция 3: Форма заказа спорпита и консультации -->
-      <section id="nutrition-consult-section" class="mb-4 p-4 rounded bg-white border">
-        <h2>Заказать спортивное питание или консультацию</h2>
-        <p>
-          Выберите нужный препарат или опишите цель. Администратор фитнес-бара свяжется с вами для оформления брони:
+      <!-- Секция 3: Форма заказа -->
+      <section id="nutrition-consult-section" class="mb-4 p-4 rounded-3 bg-white border shadow-sm">
+        <h2 class="mb-2">Заказать спортивное питание или консультацию</h2>
+        <p class="text-muted mb-4">
+          Выберите нужный препарат или опишите цель. Администратор фитнес-бара свяжется с вами для подтверждения:
         </p>
 
-        <form id="nutrition-question-form" action="#" method="POST" class="p-3 rounded border bg-light">
+        <form id="nutrition-question-form" action="#" method="POST" class="p-4 rounded-3 border bg-light">
           <div class="row g-3">
             <div class="col-12 col-md-6">
               <label for="nutri-name" class="form-label fw-bold">Ваше имя:</label>
@@ -296,7 +295,7 @@
             </div>
 
             <div class="col-12">
-              <button id="nutri-submit-btn" type="submit" class="btn btn-dark fw-bold px-4">
+              <button id="nutri-submit-btn" type="submit" class="btn btn-dark fw-bold px-4 py-2">
                 Отправить заявку
               </button>
             </div>
@@ -307,8 +306,8 @@
       </section>
     </main>
 
-    <!-- Плавающие элементы навигации -->
-    <a href="booking.html" class="btn btn-primary fw-bold rounded-pill quick-booking-btn px-3">
+    <!-- Плавающие элементы -->
+    <a href="booking.html" class="btn btn-primary fw-bold rounded-pill quick-booking-btn px-3 py-2">
       ⚡ Быстрая запись
     </a>
 
@@ -316,14 +315,12 @@
       ↑
     </a>
 
-    <!-- Подвал страницы -->
     <footer class="py-4 text-center text-white bg-dark">
       <div class="container">
         <p class="m-0">&copy; 2026 Bonanza Gym. Все права защищены.</p>
       </div>
     </footer>
 
-    <!-- Bootstrap 5.3 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
