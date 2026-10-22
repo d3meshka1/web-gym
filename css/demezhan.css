@@ -7,6 +7,7 @@
   max-width: 800px;
 }
 
+/* Только значок часов работы, а не каждый Bootstrap .badge на сайте. */
 .hero-figure .hours-badge {
   position: absolute;
   top: 0.75rem;
@@ -128,5 +129,155 @@
 @media (max-width: 1199.98px) {
   .cta-fixed {
     position: static;
+  }
+}
+
+/* Merged presentation rules formerly in interactive.css */
+/* Visual additions for Assignments 4–5. Existing CSS remains unchanged. */
+.bz-feature {
+  border: 1px solid #e1e4e9;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(20, 24, 31, 0.07);
+  overflow: hidden;
+}
+.bz-feature-head {
+  background: #151a22;
+  color: #fff;
+  padding: 24px 26px;
+}
+.bz-feature-head h2 {
+  color: #fff;
+  margin: 0 0 8px;
+}
+.bz-feature-head p {
+  color: #e5e7eb;
+  margin: 0;
+}
+.bz-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.bz-price-card {
+  background: #fff;
+  border: 1px solid #dce1e7;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+.bz-price-card:hover,
+.bz-price-card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.09);
+  border-color: #d8b454;
+}
+.bz-price-card.is-selected {
+  border: 2px solid #d4aa33;
+  background: #fffdf5;
+}
+.bz-pill {
+  display: inline-block;
+  align-self: start;
+  border-radius: 30px;
+  background: #f5e8ba;
+  color: #33270d;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 5px 10px;
+}
+.bz-price {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+.bz-meta {
+  font-size: 0.88rem;
+  color: #626b79;
+}
+.bz-price-card h3 {
+  font-size: 1.05rem;
+  margin: 0;
+  font-weight: 700;
+}
+.bz-price-card .btn {
+  margin-top: auto;
+}
+.bz-hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.bz-metric {
+  background: #f4f6f8;
+  border: 1px solid #e2e5ea;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+}
+.bz-metric strong {
+  display: block;
+  font-size: 1.45rem;
+  color: #161b23;
+}
+.bz-metric span {
+  display: block;
+  font-size: 0.85rem;
+  color: #596574;
+}
+.bz-tabular {
+  font-variant-numeric: tabular-nums;
+}
+#membership-calculator {
+  border-left: 5px solid #d4aa33 !important;
+}
+#services-cart {
+  border-left: 5px solid #d4aa33 !important;
+}
+@media (max-width: 800px) {
+  .bz-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 575px) {
+  .bz-card-grid,
+  .bz-hero-metrics {
+    grid-template-columns: 1fr;
+  }
+  .bz-feature-head {
+    padding: 20px;
+  }
+}
+
+/* Compact, visually balanced widgets for the homepage and services. */
+.compact-calc {
+  border-left: 4px solid var(--color-accent, #ff6b1a) !important;
+}
+.compact-calc .form-select {
+  min-width: 220px;
+}
+.service-extra-filters > summary {
+  list-style: none;
+  cursor: pointer;
+}
+.service-extra-filters > summary::-webkit-details-marker {
+  display: none;
+}
+#services-cart > summary,
+#reviews details > summary {
+  cursor: pointer;
+}
+#services-cart > summary:hover {
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  #service-search {
+    min-width: 230px;
   }
 }
