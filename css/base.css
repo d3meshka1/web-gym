@@ -21,7 +21,10 @@ body {
   background-color: var(--color-bg);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-heading);
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -170,12 +173,20 @@ blockquote {
   background-color: var(--color-bg);
 }
 
-q::before { content: "\00ab"; }
-q::after { content: "\00bb"; }
-cite { color: var(--color-muted); }
+q::before {
+  content: "\00ab";
+}
+q::after {
+  content: "\00bb";
+}
+cite {
+  color: var(--color-muted);
+}
 /* Не сбрасываем margin-top у колонок .row: он нужен для Bootstrap gutters. */
 main ul:not(.row) > li:first-child,
-main ol:not(.row) > li:first-child { margin-top: 0; }
+main ol:not(.row) > li:first-child {
+  margin-top: 0;
+}
 
 /* Таблица прокручивается только внутри table-responsive, а не вся страница. */
 caption {
@@ -213,8 +224,12 @@ legend {
   font-weight: 700;
 }
 
-label { font-weight: 600; }
-textarea { max-width: 100%; }
+label {
+  font-weight: 600;
+}
+textarea {
+  max-width: 100%;
+}
 
 a:focus-visible,
 button:focus-visible,
@@ -262,7 +277,8 @@ textarea:focus {
 
 /* Состояния для следующих заданий. Сами классы не добавляют JavaScript.
    !important нужен только для скрытия поверх display-утилит Bootstrap. */
-[hidden], .is-hidden {
+[hidden],
+.is-hidden {
   display: none !important;
 }
 
@@ -321,7 +337,10 @@ textarea:focus {
 }
 
 /* Моноширинные элементы сохранены для общих страниц сайта. */
-pre, code, kbd, samp {
+pre,
+code,
+kbd,
+samp {
   font-family: var(--font-mono);
   font-size: 0.9rem;
 }
