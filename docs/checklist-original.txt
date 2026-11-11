@@ -1,0 +1,185 @@
+CHECK-LIST
+1. Required in each file
+index.html - Kaidar Demezhan
+<!DOCTYPE html> -  line 1
+Lang - line 2
+Charset - line 4
+Viewport - line 5
+Meta description - line 6
+Meta author - line 7
+h1 - line 13
+header - line 11
+nav - line 16
+main - line 28
+footer - line 121
+comments - 1. Line 15, 2. Line 29
+
+branches.html - Kaidar Demezhan
+<!DOCTYPE html> -  line 1
+Lang - line 2
+Charset - line 4
+Viewport - line 5
+Meta description - line 6
+Meta author - line 7
+h1 - line 13
+header - line 11
+nav - line 16
+main - line 30
+footer - line 295
+comments - 1. Line 156, 2. Line 268
+
+schedule.html - Yerassyl Sagimgaliyev
+<!DOCTYPE html> -  line 1
+Lang - line 2
+Charset - line 4
+Viewport - line 5
+Meta description - line 6
+Meta author - line 7
+h1 - line 12
+header - line 11
+nav - line 13
+main - line 24
+footer - line 119
+comments - line 15, line 74
+
+membership.html - Kaidar Demezhan
+<!DOCTYPE html> -  line 1
+Lang - line 2
+Charset - line 4
+Viewport - line 5
+Meta description - line 6
+Meta author - line 7
+h1 - line 13
+header - line 11
+nav - line 16
+main - line 31
+footer - line 250
+comments - 1. Line  143,  2. Line 187, 3.76 line
+
+colophon.html - Yerassyl Sagimgaliyev
+<!DOCTYPE html> -  line 1
+Lang - line 2
+Charset - line 4
+Viewport - line 5
+Meta description - line 6
+Meta author - line 7
+h1 - line 12
+header - line 11
+nav - line 13
+main - line 25
+footer - line 53
+comments - line 44, line 52
+
+facilities.html - Yerassyl Sagimgaliyev
+<!DOCTYPE html> -  line 1
+Lang - line 2
+Charset - line 4
+Viewport - line 5
+Meta description - line 6
+Meta author - line 7
+h1 - line 13
+header - line 12
+nav - line 14
+main - line 26
+footer - line 174
+comments - line 41, line 119
+
+2. Required in total for the entire site
+section - branches.html - line 32(Kaidar Demezhan)
+section - schedule.html - line 29(Yerassyl Sagimgaliyev)
+
+article - facilities.html - line 31(Yerassyl Sagimgaliyev)
+article - index.html - line 91(Kaidar Demezhan)
+
+aside - index.html - line 58(Kaidar Demehzan)
+aside - facilities.html - line 120(Yerassyl Sagimgaliyev)
+
+figure + figcaption - facilities.html - line 35, line 37(Yerassyl Sagimgaliyev)
+figure + figcaption - branches - line 267, line 276(Kaidar Demezhan)
+
+table - membership.html - line 78(Kaidar Demezhan)
+table -  schedule.html - line 35(Yerassyl Sagimgaliyev)
+
+nested list - membership.html - line 152(Kaidar Demezhan)
+nested list - facilities.html - line 51(Yerassyl Sagimgaliyev)
+
+ol - schedule.html - line 157(Yerassyl Sagimgaliyev)
+ol - branches.html - line 244(Kaidar Demezhan)
+
+dl- schedule.html - line 171(Yerassyl Sagimgaliyev)
+dl - membership.html - line 52(Kaidar Demezhan)
+
+target - schedule.html - line 190(Yerassyl Sagimgaliyev)
+target - membership.html - line 255(Kaidar Demezhan)
+
+mailto - index.html - line 41(Kaidar Demezhan)
+tel - index.html - line 40(Kaidar Demezhan)
+
+id href -schedule.html - line 33(Yerassyl Sagimgaliyev)
+id href - membership.html - line 170, line 177(Kaidar Demezhan)
+
+Img - branches.html - line 271, line 279, line 287(Kaidar Demezhan)
+Img - facilities.html - line 36, line 47, line 107(Yerassyl Sagimgaliyev)
+
+strong - colophon.html - linE 29(Yerassyl Sagimgaliyev)
+strong - index.html - line 36(Kaidar Demezhan)
+
+em - colophon.html - line 35(Yerassyl Sagimgaliyev
+em - index.html - line 17(Kaidar Demezhan)
+
+b - index.html - line 62(Kaidar Demezhan)
+b - branches.html - line 159(Yerassyl Sagimgaliyev)
+
+i - index.html - line 13(Kaidar Demezhan)
+I -schedule.html - line 160(Yerassyl Sagimgaliyev)
+
+mark - schedule.html - line 48(Yerassyl Sagimgaliyev)
+mark - index.html - line 104(Kaidar Demezhan)
+
+small - index.html - line 83(Kaidar Demezhan)
+
+sub- schedule.html - line 167(Yerassyl Sagimgaliyev)
+sup - branches.html - line 66(Kaidar Demezhan)
+
+abbr - schedule.html - line 165(Yerassyl Sagimgaliyev)
+abbr - index.html - line 50(Kaidar Demezhan)
+
+blockquote + cite - membership.html - line 135, line 146(Kaidar Demezhan)
+blockquote + cite - schedule.html - line 178, line 180(Yerassyl Sagimgaliyev)
+
+q - facilities.html - line 122(Yerassyl Sagimgaliyev)
+q - membership.html - line 43(Kaidar Demezhan)
+
+pre,code - colophon.html - line 46(Yerassyl Sagimgaliyev
+)
+kbd,samp - colophon.html - line 53(Yerassyl Sagimgaliyev
+)
+
+br - schedule.html - line 80(Yerassyl Sagimgaliyev
+)
+hr - schedule.html - line 152(Yerassyl Sagimgaliyev
+)
+
+br -membership.html - line 190(Kaidar Demezhan)
+hr -membership.html - line 17(Kaidar Demezhan)
+
+Html entity - membership.html - line 50, line 69(Kaidar Demezhan)
+Html entity - facilities.html - line 9, line 144(Yerassyl Sagimgaliyev)
+
+div - schedule.html - line 78-79(Yerassyl Sagimgaliyev
+)
+span - membership.html - line 142-143(Kaidar Demezhan)
+
+form - branches.html - line 155(Kaidar Demezhan)
+form - schedule.html - line 73(Yerassyl Sagimgaliyev
+)
+
+
+
+
+
+
+
+
+
+

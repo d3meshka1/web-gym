@@ -1,0 +1,16 @@
+CSS Cleanup Log for Assignment 3 
+
+1. Removed custom flexbox layout rules from .contact-item (.demezhan.css)
+   -> Replaced with Bootstrap grid classes: row, g-3, col-12, and col-md-4.
+
+2. Removed custom flexbox sizing from .zone-item (.demezhan.css)
+   -> Replaced with Bootstrap grid classes: row, g-3, col-12, and col-md-6.
+
+3. Removed custom inline styles for hamburger toggle icon (.html files)
+   -> Replaced with Bootstrap's built-in navbar-dark modifier class on <nav>.
+
+4. Replaced manual spacing and alignment styling on layout blocks (.html files)
+   -> Replaced with Bootstrap utility classes: text-center, text-md-start, d-none, d-lg-block, mx-auto, and py-4.
+
+5. Added responsive table wrapping (.html files)
+   -> Replaced overflowing raw tables with Bootstrap's <div class="table-responsive"> wrapper.
